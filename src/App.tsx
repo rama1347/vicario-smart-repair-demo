@@ -729,16 +729,6 @@ function App() {
             </p>
           </div>
           <div>
-            <h3>Kontakt</h3>
-            <p>
-              <a href={phoneHref}>{phoneDisplay}</a>
-            </p>
-            <p>
-              <a href={mailHref}>{publicEmail}</a>
-            </p>
-            <p>Neubrücker Ring 50, 51109 Köln</p>
-          </div>
-          <div>
             <h3>Öffnungszeiten</h3>
             <p>Mo-Fr 10:00–14:00 und 15:00–19:00</p>
             <p>Sa 10:00–15:00</p>
@@ -751,6 +741,16 @@ function App() {
                 <li key={service}>{service}</li>
               ))}
             </ul>
+          </div>
+          <div>
+            <h3>Standort</h3>
+            <p>Neubrücker Ring 50</p>
+            <p>51109 Köln-Neubrück</p>
+            <p>
+              <a href={mapsHref} target="_blank" rel="noreferrer">
+                Route planen
+              </a>
+            </p>
           </div>
         </div>
         <div className="footer-bottom">
