@@ -44,7 +44,7 @@ const trustMetrics = [
   {
     label: 'Annahme',
     value: '24 Stunden',
-    text: 'Fahrzeugabgabe außerhalb der Öffnungszeiten nach vorheriger Abstimmung möglich.',
+    text: 'Fahrzeugabgabe nach Absprache auch außerhalb der Öffnungszeiten möglich.',
   },
 ]
 
@@ -86,14 +86,14 @@ const reasons = [
   },
   {
     title: 'Persönlicher Ansprechpartner',
-    text: 'Alessandro Vicario ist der persönliche Ansprechpartner für direkte Absprache, kurze Wege und nachvollziehbare Beratung vor Beginn.',
+    text: 'Alessandro Vicario ist der persönliche Ansprechpartner für direkte Absprache, kurze Wege und nachvollziehbare Beratung zur Arbeit.',
   },
 ]
 
 const services = [
   {
     title: 'Smart-Repair',
-    text: 'Kleine optische Schäden werden gezielt bearbeitet, ohne direkt große Ersatzteil- oder Demontagekosten auszulösen.',
+    text: 'Kleine optische Schäden werden gezielt bearbeitet, ohne direkt hohe Ersatzteil- oder Demontagekosten auszulösen.',
     details: ['kleine Schäden', 'gezielt', 'kostenschonend'],
   },
   {
@@ -128,7 +128,7 @@ const services = [
   },
   {
     title: 'Tuning & Umbauten',
-    text: 'Ausgewählte Tuning-Arbeiten an Felgen, Fahrwerk, Bremsanlage, Abgasanlage, Karosserie und Fahrzeugoptik – abgestimmt auf das Fahrzeug.',
+    text: 'Ausgewählte Tuning-Arbeiten an Felgen, Fahrwerk, Bremsanlage, Abgasanlage, Karosserie und Fahrzeugoptik – nach Absprache.',
     details: ['Alufelgen', 'Fahrwerk', 'Umbauten'],
   },
 ]
@@ -337,6 +337,7 @@ function App() {
           <a href="#vertrauen">Vertrauen</a>
           <a href="#leistungen">Leistungen</a>
           <a href="#arbeiten">Arbeiten</a>
+          <a href="#betrieb">Betrieb</a>
           <a href="#anfrage">Anfrage</a>
           <a href="#faq">FAQ</a>
         </nav>
@@ -446,7 +447,7 @@ function App() {
           <p>
             Vicario Smart-Repair ist nicht nur für kleine Lackschäden da. Kunden bekommen Hilfe bei
             Smart-Repair, Kfz-Reparatur, Felgen, Aufbereitung, Innenraum und ausgewählten
-            Tuning-Arbeiten – mit persönlicher Absprache vor Beginn.
+            Tuning-Arbeiten – mit persönlicher Absprache vor der Arbeit.
           </p>
         </div>
         <div className="reason-grid" aria-label="Qualitätsmerkmale">
@@ -645,8 +646,8 @@ function App() {
           <p>
             Vicario Smart-Repair verbindet klassische Kfz-Reparatur mit Smart-Repair,
             Felgenreparatur, Fahrzeugaufbereitung, Innenraumarbeiten und ausgewählten
-            Tuning-Leistungen. Kunden haben einen direkten Ansprechpartner und wissen vor Beginn,
-            welcher Weg sinnvoll ist.
+            Tuning-Leistungen. Kunden haben einen direkten Ansprechpartner und wissen, welcher Weg
+            sinnvoll ist, bevor die Arbeit startet.
           </p>
         </div>
         <div className="profile-card">
