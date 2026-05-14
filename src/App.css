@@ -384,14 +384,14 @@ h3 {
 .process-step,
 .repair-card,
 .profile-card,
-.contact-actions a {
+.contact-actions > a {
   border-radius: 8px;
 }
 
 .metric-card,
 .review-card,
 .profile-card,
-.contact-actions a {
+.contact-actions > a {
   border: 1px solid rgba(255, 255, 255, 0.13);
   background: rgba(255, 255, 255, 0.055);
 }
@@ -401,8 +401,7 @@ h3 {
   padding: 24px;
 }
 
-.metric-card span,
-.contact-actions span {
+.metric-card span {
   display: block;
   margin-bottom: 9px;
   color: rgba(255, 255, 255, 0.62);
@@ -1115,11 +1114,11 @@ h3 {
 
 .contact-section {
   display: grid;
-  grid-template-columns: minmax(0, 0.86fr) minmax(420px, 1fr);
-  gap: 58px;
+  grid-template-columns: minmax(0, 0.95fr) minmax(360px, 0.78fr);
+  gap: 42px;
   align-items: center;
-  padding-top: 98px;
-  padding-bottom: 98px;
+  padding-top: 72px;
+  padding-bottom: 72px;
   color: #ffffff;
   background:
     linear-gradient(135deg, rgba(199, 45, 37, 0.16), rgba(241, 189, 54, 0.06)),
@@ -1131,24 +1130,48 @@ h3 {
 }
 
 .contact-actions {
-  display: grid;
-  gap: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
 }
 
-.contact-actions a {
-  padding: 24px;
+.contact-actions > a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 18px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 900;
 }
 
-.contact-actions a:hover {
+.contact-actions > a:hover {
   background: rgba(255, 255, 255, 0.09);
 }
 
-.contact-actions strong {
-  display: block;
+.contact-actions > a.contact-primary {
+  border-color: transparent;
+  background: var(--red);
+}
+
+.contact-actions > a.contact-primary:hover {
+  background: #a91f19;
+}
+
+.contact-note {
+  width: 100%;
+  margin: 4px 0 0;
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 14px;
+  line-height: 1.55;
+  text-align: right;
+}
+
+.contact-note a {
   color: #ffffff;
-  font-size: 22px;
-  line-height: 1.2;
-  overflow-wrap: anywhere;
+  font-weight: 800;
 }
 
 .mobile-action-bar {
@@ -1164,7 +1187,7 @@ h3 {
   display: grid;
   grid-template-columns: 1.15fr repeat(3, 1fr);
   gap: 36px;
-  padding: 54px max(40px, calc((100vw - 1220px) / 2));
+  padding: 42px max(40px, calc((100vw - 1220px) / 2));
 }
 
 .site-footer h3 {
@@ -1189,9 +1212,9 @@ h3 {
 .footer-bottom {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 22px;
-  padding: 22px max(40px, calc((100vw - 1220px) / 2));
+  padding: 18px max(40px, calc((100vw - 1220px) / 2));
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   font-size: 14px;
 }
@@ -1218,6 +1241,10 @@ h3 {
 
   .hero-card {
     max-width: 620px;
+  }
+
+  .contact-actions {
+    justify-content: flex-start;
   }
 
   .trust-metrics,
@@ -1347,6 +1374,18 @@ h3 {
     align-items: flex-start;
     flex-direction: column;
   }
+
+  .contact-actions {
+    align-items: stretch;
+  }
+
+  .contact-actions > a {
+    width: 100%;
+  }
+
+  .contact-note {
+    text-align: left;
+  }
 }
 
 @media (max-width: 600px) {
@@ -1402,7 +1441,6 @@ h3 {
   .service-card,
   .process-step,
   .hero-card,
-  .contact-actions a,
   .repair-card,
   .profile-card {
     padding: 22px;

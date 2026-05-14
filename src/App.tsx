@@ -682,26 +682,25 @@ function App() {
       <section className="contact-section" id="kontakt">
         <div className="contact-copy">
           <p className="section-label">Kontakt</p>
-          <h2>Anrufen, Anfrage senden oder Route planen.</h2>
+          <h2>Schaden, Reparatur oder Termin klären?</h2>
           <p>
-            Für schnelle Fragen rufen Sie direkt an. Für konkrete Arbeiten können Sie die
-            wichtigsten Angaben vorab senden. Die Route führt direkt zum Standort am Neubrücker
-            Ring.
+            Rufen Sie direkt an oder senden Sie die wichtigsten Angaben vorab. Die Werkstatt
+            befindet sich am Neubrücker Ring in Köln-Neubrück.
           </p>
         </div>
-        <div className="contact-actions">
-          <a href={mailHref}>
-            <span>E-Mail</span>
-            <strong>{publicEmail}</strong>
+        <div className="contact-actions" aria-label="Kontaktaktionen">
+          <a className="contact-primary" href={phoneHref}>
+            Direkt anrufen
           </a>
-          <a href={phoneHref}>
-            <span>Telefon</span>
-            <strong>{phoneDisplay}</strong>
+          <a href={mailHref}>
+            Anfrage senden
           </a>
           <a href={mapsHref} target="_blank" rel="noreferrer">
-            <span>Route planen</span>
-            <strong>Neubrücker Ring 50, 51109 Köln</strong>
+            Route planen
           </a>
+          <p className="contact-note">
+            E-Mail: <a href={mailHref}>{publicEmail}</a>
+          </p>
         </div>
       </section>
 
@@ -743,23 +742,22 @@ function App() {
             </ul>
           </div>
           <div>
-            <h3>Standort</h3>
-            <p>Neubrücker Ring 50</p>
-            <p>51109 Köln-Neubrück</p>
+            <h3>Standort & Rechtliches</h3>
+            <p>Neubrücker Ring 50, 51109 Köln</p>
             <p>
               <a href={mapsHref} target="_blank" rel="noreferrer">
                 Route planen
+              </a>
+            </p>
+            <p>
+              <a href="https://www.vicario-smart-repair.de/impressum/" target="_blank" rel="noreferrer">
+                Impressum
               </a>
             </p>
           </div>
         </div>
         <div className="footer-bottom">
           <span>© Vicario Smart-Repair</span>
-          <div>
-            <a href="https://www.vicario-smart-repair.de/impressum/" target="_blank" rel="noreferrer">
-              Impressum
-            </a>
-          </div>
         </div>
       </footer>
     </main>
