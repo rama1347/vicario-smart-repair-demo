@@ -11,7 +11,7 @@ import {
 const assetUrl = (path: string) => `${import.meta.env.BASE_URL}${path}`
 
 const workshopImage = assetUrl('vicario-workshop.png')
-const publicEmail = 'info@vicario-smart-repair.de'
+const publicEmail = 'vicario.smartrepair@web.de'
 const phoneDisplay = '+49 157 76130545'
 const phoneHref = 'tel:+4915776130545'
 const mapsHref =
@@ -20,31 +20,31 @@ const googleReviewsHref =
   'https://www.google.de/maps/place/Vicario+Smart-Repair/@50.9284952,7.0589737,17z/data=!4m8!3m7!1s0x47bf27a6148afcbd:0x7890ed1d06b10f75!8m2!3d50.9284952!4d7.0615486!9m1!1b1!16s%2Fg%2F11h54z6s1v'
 
 const mailHref = `mailto:${publicEmail}?subject=${encodeURIComponent(
-  'Schadenanfrage Vicario Smart-Repair',
+  'Anfrage Vicario Smart-Repair',
 )}&body=${encodeURIComponent(
-  'Hallo Vicario Smart-Repair,\n\nich möchte eine Anfrage stellen.\n\nFahrzeugmodell:\nSchaden:\nRückrufnummer:\n\nFotos füge ich im Anhang hinzu.\n',
+  'Hallo Vicario Smart-Repair,\n\nich möchte eine Anfrage stellen.\n\nFahrzeugmodell:\nAnliegen:\nRückrufnummer:\n\nFotos füge ich bei Bedarf im Anhang hinzu.\n',
 )}`
 
 const trustMetrics = [
   {
     label: 'Google-Bewertung',
     value: '4,5 / 5',
-    text: 'Viele Kunden nennen Service, Preis und Ergebnis positiv.',
+    text: 'Echte Bewertungen von Kunden aus Köln und Umgebung.',
   },
   {
-    label: 'Kundenbewertungen',
-    value: '50+',
-    text: 'Öffentlich sichtbare Erfahrungen aus Köln und Umgebung.',
-  },
-  {
-    label: 'Standort',
+    label: 'Werkstatt',
     value: 'Köln-Neubrück',
-    text: 'Direkt am Neubrücker Ring.',
+    text: 'Direkt am Neubrücker Ring erreichbar.',
   },
   {
-    label: 'Erreichbarkeit',
-    value: 'Telefon & E-Mail',
-    text: 'Für Fragen, Termine und kurze Abstimmungen.',
+    label: 'Service',
+    value: 'Ersatzwagen',
+    text: 'Kostenloser Ersatzwagen nach Absprache.',
+  },
+  {
+    label: 'Annahme',
+    value: '24 Stunden',
+    text: 'Fahrzeugabgabe auch außerhalb der Öffnungszeiten möglich.',
   },
 ]
 
@@ -58,68 +58,83 @@ const reviews = [
     label: 'Öffentliche Google-Bewertung · 5 Sterne',
   },
   {
-    quote: 'Sehr nette und hilfsbereite Werkstatt … Guter Service, gute Arbeiten.',
+    quote: 'kompetente und sehr freundliche Mitarbeiter. Dazu ein passendes Preis-Leistungsverhältnis. TOP:-))',
     label: 'Öffentliche Google-Bewertung · 5 Sterne',
   },
 ]
 
 const reasons = [
   {
-    title: 'Erst prüfen, dann entscheiden',
-    text: 'Nicht jeder sichtbare Schaden braucht dieselbe Lösung. Vor Beginn wird besprochen, welcher Reparaturweg sinnvoll ist.',
+    title: 'Smart-Repair für sichtbare Schäden',
+    text: 'Kratzer, Parkschrammen, kleine Dellen und Beulen werden gezielt bearbeitet, wenn eine saubere Reparatur möglich ist.',
   },
   {
     title: 'Kosten vor Beginn besprechen',
-    text: 'Aufwand und mögliche Kosten werden angesprochen, bevor die Arbeit am Fahrzeug startet.',
+    text: 'Vor Beginn wird erklärt, welcher Reparaturweg sinnvoll ist und welche Arbeiten wirklich nötig sind.',
+  },
+  {
+    title: 'Kostenloser Ersatzwagen',
+    text: 'Während das Fahrzeug in der Werkstatt ist, kann nach Absprache ein Ersatzwagen kostenlos zur Verfügung stehen.',
+  },
+  {
+    title: '24-Stunden-Annahme',
+    text: 'Die Fahrzeugabgabe ist nach Absprache auch außerhalb der regulären Öffnungszeiten möglich.',
+  },
+  {
+    title: 'Prüfung auch kurzfristig möglich',
+    text: 'Sichtbare Schäden können vor Ort angeschaut werden. Für sichere Planung empfiehlt sich vorher ein Anruf oder eine Anfrage.',
   },
   {
     title: 'Persönlicher Ansprechpartner',
-    text: 'Kurze Wege und direkte Kommunikation mit der Werkstatt statt anonymer Annahme.',
-  },
-  {
-    title: 'Arbeit an sichtbaren Details',
-    text: 'Lack, Felgen und Karosseriekanten bekommen die Aufmerksamkeit, die man im Alltag direkt sieht.',
-  },
-  {
-    title: 'Samstags erreichbar',
-    text: 'Praktisch für Kunden, die unter der Woche wenig Zeit für die Werkstatt haben.',
-  },
-  {
-    title: 'Abgabe nach Absprache',
-    text: 'Wenn es zeitlich eng ist, kann eine passende Abgabe vorher besprochen werden.',
+    text: 'Alessandro Vicario steht für direkte Absprache, kurze Wege und eine verständliche Rückmeldung zur Arbeit.',
   },
 ]
 
 const services = [
   {
     title: 'Smart-Repair',
-    text: 'Für kleine optische Schäden an Lack, Stoßfänger oder Karosserie, wenn eine gezielte Reparatur möglich ist.',
-    details: ['Kratzer', 'kleine Dellen', 'Parkschrammen'],
+    text: 'Kleine optische Schäden werden gezielt bearbeitet, ohne direkt große Ersatzteil- oder Demontagekosten auszulösen.',
+    details: ['kleine Schäden', 'schnell', 'gezielt'],
   },
   {
-    title: 'Lackkratzer & Parkschrammen',
-    text: 'Bearbeitung typischer Spuren an Stoßfänger, Kotflügel, Tür oder Klarlack nach Parkplatzremplern und Alltagskratzern.',
-    details: ['Stoßfänger', 'Klarlack', 'Lackschäden'],
+    title: 'Parkschrammen & Lackkratzer',
+    text: 'Schäden an Stoßfänger, Kotflügel, Tür oder Klarlack werden sauber ausgebessert, wenn der Zustand es zulässt.',
+    details: ['Stoßfänger', 'Klarlack', 'Kratzer'],
   },
   {
     title: 'Dellen & Beulen',
-    text: 'Kleine Verformungen an Tür, Kotflügel oder Karosserie, abhängig von Stelle, Größe und Lackzustand.',
-    details: ['Tür', 'Kotflügel', 'Karosserie'],
+    text: 'Kleine Karosserie- und Blechschäden werden je nach Stelle und Lackzustand passend bearbeitet.',
+    details: ['Tür', 'Kotflügel', 'Blechschäden'],
   },
   {
-    title: 'Felgenreparatur',
-    text: 'Schrammen und optische Schäden an Felgen werden sauber aufbereitet, damit das Fahrzeug wieder gepflegt wirkt.',
-    details: ['Bordsteinschäden', 'Oberfläche', 'Felgenbild'],
+    title: 'Felgendoktor',
+    text: 'Kratzer, Bordsteinschäden und optische Schäden an Felgen werden für ein gepflegtes Felgenbild aufbereitet.',
+    details: ['Alufelgen', 'Bordsteinschäden', 'Optik'],
+  },
+  {
+    title: 'Brandlöcher in Sitzen',
+    text: 'Brandlöcher, kleine Einschnitte und sichtbare Schäden an Polster oder Leder können je nach Material ausgebessert werden.',
+    details: ['Sitze', 'Innenraum', 'Polster'],
+  },
+  {
+    title: 'Fahrzeugaufbereitung',
+    text: 'Pflege und Aufbereitung für Lack, Innenraum und Fahrzeugdetails - für ein sauberes, gepflegtes Gesamtbild.',
+    details: ['Lackpflege', 'Innenraum', 'Aufbereitung'],
   },
   {
     title: 'Kfz-Reparatur',
-    text: 'Wartung, Diagnose und Reparatur für alltägliche Werkstattarbeiten am Fahrzeug.',
+    text: 'Reparaturen aller Art, Diagnose und Wartung mit Blick auf Komfort und Sicherheit im Fahrzeug.',
     details: ['Diagnose', 'Wartung', 'Reparatur'],
   },
   {
-    title: 'Aufbereitung & Fahrzeugdetails',
-    text: 'Pflege, optische Details und dezente Anpassungen für ein sauberes, gepflegtes Fahrzeugbild.',
-    details: ['Aufbereitung', 'Details', 'Optik'],
+    title: 'Tuning & Umbauten',
+    text: 'Ausgewählte Tuning-Arbeiten wie Alufelgen, Gewinde-Sportfahrwerke, Sportbremsanlagen, Sportabgasanlagen sowie Karosserie- oder Motorumbauten.',
+    details: ['Alufelgen', 'Fahrwerk', 'Umbauten'],
+  },
+  {
+    title: 'Annahme & Ersatzwagen',
+    text: '24-Stunden-Annahme und kostenloser Ersatzwagen erleichtern den Werkstattbesuch im Alltag.',
+    details: ['24h-Annahme', 'Ersatzwagen', 'Service'],
   },
 ]
 
@@ -127,14 +142,14 @@ const beforeAfter = [
   {
     title: 'Lackkratzer am Kotflügel',
     before: 'sichtbarer Kratzer im Lack',
-    after: 'Oberfläche deutlich sauberer und gepflegter',
+    after: 'sauberere Oberfläche und gepflegteres Bild',
     beforeImage: assetUrl('vicario-before-after/scratch-before.jpg'),
     afterImage: assetUrl('vicario-before-after/scratch-after.jpg'),
   },
   {
     title: 'Felge aufbereitet',
     before: 'Felge vor der Aufbereitung',
-    after: 'fertige Felge am Fahrzeug',
+    after: 'sichtbar aufbereitete Felge am Fahrzeug',
     beforeImage: assetUrl('vicario-before-after/wheel-before.jpg'),
     afterImage: assetUrl('vicario-before-after/wheel-after.jpg'),
   },
@@ -150,29 +165,34 @@ const beforeAfter = [
 const process = [
   {
     step: '01',
-    title: 'Schaden fotografieren',
-    text: 'Machen Sie ein Detailbild und ein Foto mit etwas Abstand, damit die Stelle am Fahrzeug erkennbar ist.',
+    title: 'Kontakt aufnehmen',
+    text: 'Per Telefon, E-Mail oder Anfrage mit Foto kann der erste Kontakt schnell gestartet werden.',
   },
   {
     step: '02',
-    title: 'Angaben mitschicken',
-    text: 'Fahrzeugmodell, kurze Beschreibung und Telefonnummer reichen für den ersten Kontakt.',
+    title: 'Schaden oder Leistung besprechen',
+    text: 'Ob Lackschaden, Felge, Innenraum, Reparatur oder Tuning: Der passende Weg wird vorab abgestimmt.',
   },
   {
     step: '03',
-    title: 'Werkstatt meldet sich',
-    text: 'Vicario Smart-Repair klärt offene Fragen und stimmt ab, ob ein Termin sinnvoll ist.',
+    title: 'Termin oder Annahme klären',
+    text: 'Je nach Aufwand wird ein Termin, eine 24-Stunden-Annahme oder eine kurze Prüfung vor Ort abgestimmt.',
   },
   {
     step: '04',
-    title: 'Fahrzeug ansehen lassen',
-    text: 'Vor Beginn wird das Fahrzeug vor Ort angesehen und der Reparaturweg besprochen.',
+    title: 'Arbeit durchführen lassen',
+    text: 'Die Arbeit beginnt erst, wenn Umfang, Aufwand und Vorgehen verständlich besprochen sind.',
   },
 ]
 
 const localAreas = ['Neubrück', 'Brück', 'Merheim', 'Köln-Ost', 'Ostheim', 'Rath/Heumar']
 
 const faqs = [
+  {
+    question: 'Welche Leistungen bietet Vicario Smart-Repair an?',
+    answer:
+      'Zum Angebot gehören Smart-Repair, Parkschrammen, Lackkratzer, kleine Dellen und Beulen, Blechschäden, Felgenreparatur, Brandlöcher in Sitzen, Fahrzeugaufbereitung, Kfz-Reparatur und Tuning.',
+  },
   {
     question: 'Welche Fotos soll ich für eine Anfrage senden?',
     answer:
@@ -204,12 +224,12 @@ const faqs = [
       'Vicario Smart-Repair befindet sich am Neubrücker Ring 50 in 51109 Köln, gut erreichbar aus Neubrück, Brück, Merheim und Köln-Ost.',
   },
   {
-    question: 'Wie schnell bekomme ich eine Rückmeldung?',
+    question: 'Wie schnell meldet sich die Werkstatt?',
     answer:
       'So schnell wie möglich während der Öffnungszeiten. Vollständige Angaben helfen, ohne mehrere Rückfragen voranzukommen.',
   },
   {
-    question: 'Muss ich für die erste Einschätzung direkt vorbeikommen?',
+    question: 'Muss ich für die erste Besprechung direkt vorbeikommen?',
     answer:
       'Für eine grobe Richtung reichen oft Fotos. Die endgültige Beurteilung erfolgt jedoch am Fahrzeug.',
   },
@@ -218,9 +238,43 @@ const faqs = [
     answer:
       'Wenn der Schaden zu groß, ungünstig gelegen oder technisch problematisch ist, wird das offen angesprochen. Dann wird ein anderer Reparaturweg empfohlen.',
   },
+  {
+    question: 'Gibt es einen Ersatzwagen?',
+    answer:
+      'Nach Absprache kann für die Dauer der Arbeiten ein kostenloser Ersatzwagen zur Verfügung gestellt werden.',
+  },
+  {
+    question: 'Kann ich mein Auto außerhalb der Öffnungszeiten abgeben?',
+    answer:
+      'Ja, eine 24-Stunden-Annahme ist nach Absprache möglich.',
+  },
+  {
+    question: 'Kann ich ohne Termin vorbeikommen?',
+    answer:
+      'Eine kurze Prüfung vor Ort kann möglich sein. Für eine bessere Planung empfiehlt sich vorher ein Anruf oder eine Anfrage mit Foto.',
+  },
+  {
+    question: 'Repariert ihr auch Brandlöcher oder Schäden im Sitz?',
+    answer:
+      'Kleine Schäden an Sitzen, wie Brandlöcher oder Einschnitte, können je nach Material und Zustand ausgebessert werden.',
+  },
+  {
+    question: 'Macht Vicario auch Tuning?',
+    answer:
+      'Ja, ausgewählte Tuning-Arbeiten wie Alufelgen, Fahrwerk, Karosserie, Sportabgasanlagen, Sportbremsanlagen oder Umbauten können nach Absprache durchgeführt werden.',
+  },
 ]
 
-const footerServices = ['Smart-Repair', 'Felgenreparatur', 'Lackkratzer', 'Dellen & Beulen']
+const footerServices = [
+  'Smart-Repair',
+  'Felgendoktor',
+  'Lackkratzer',
+  'Dellen & Beulen',
+  'Brandlöcher',
+  'Fahrzeugaufbereitung',
+  'Kfz-Reparatur',
+  'Tuning',
+]
 
 function StarRating() {
   return (
@@ -270,16 +324,16 @@ function App() {
       '',
       `Name: ${formData.name || '-'}`,
       `Fahrzeugmodell: ${formData.vehicle || '-'}`,
-      `Schaden: ${formData.damage || '-'}`,
+      `Anliegen: ${formData.damage || '-'}`,
       `Rückrufnummer: ${formData.phone || '-'}`,
       '',
       selectedFileCount > 0
         ? 'Fotos habe ich ausgewählt und füge sie im E-Mail-Fenster hinzu.'
-        : 'Fotos füge ich im Anhang hinzu.',
+        : 'Fotos füge ich bei Bedarf im Anhang hinzu.',
     ].join('\n')
 
     return `mailto:${publicEmail}?subject=${encodeURIComponent(
-      'Schadenanfrage Vicario Smart-Repair',
+      'Anfrage Vicario Smart-Repair',
     )}&body=${encodeURIComponent(body)}`
   }, [formData, selectedFileCount])
 
@@ -321,14 +375,14 @@ function App() {
         <div className="hero-inner">
           <div className="hero-copy">
             <p className="eyebrow">Kfz-Werkstatt in Köln-Neubrück</p>
-            <h1>Kratzer, Dellen und Lackschäden sauber beheben lassen.</h1>
+            <h1>Smart-Repair, Reparatur und Tuning in Köln-Neubrück.</h1>
             <p className="hero-lead">
-              Senden Sie ein Foto vom Schaden und erhalten Sie eine erste Rückmeldung – direkt und
-              ohne unnötiges Hin und Her.
+              Vicario Smart-Repair hilft bei sichtbaren Schäden, Kfz-Reparaturen, Felgen,
+              Aufbereitung und ausgewählten Tuning-Arbeiten - direkt am Neubrücker Ring.
             </p>
             <div className="hero-actions" aria-label="Kontaktoptionen">
               <a className="primary-button" href="#anfrage">
-                Foto vom Schaden senden
+                Schaden anfragen
               </a>
               <a className="secondary-button" href={phoneHref}>
                 Direkt anrufen
@@ -336,19 +390,22 @@ function App() {
             </div>
             <div className="hero-proof" aria-label="Kurzinfos">
               <span>Google 4,5 / 5</span>
-              <span>50+ Bewertungen</span>
-              <span>Köln-Neubrück · Neubrücker Ring</span>
+              <span>Kostenloser Ersatzwagen</span>
+              <span>24-Stunden-Annahme</span>
               <span>Samstags geöffnet</span>
             </div>
           </div>
 
           <aside className="hero-card" aria-label="Schnellkontakt">
             <p className="card-label">Schnellkontakt</p>
-            <h2>Kurz anfragen. Termin abstimmen.</h2>
+            <h2>Schaden zeigen. Reparaturweg klären.</h2>
             <dl>
               <div>
                 <dt>Für den ersten Kontakt</dt>
-                <dd>Fahrzeugmodell, kurze Beschreibung, Rückrufnummer und bei Bedarf ein Foto.</dd>
+                <dd>
+                  Foto, Fahrzeugmodell und kurze Beschreibung reichen oft für den ersten Kontakt.
+                  Bei Bedarf wird der Schaden vor Ort genauer angesehen.
+                </dd>
               </div>
               <div>
                 <dt>Telefon</dt>
@@ -360,7 +417,7 @@ function App() {
               </div>
               <div>
                 <dt>Öffnungszeiten</dt>
-                <dd>Mo-Fr 10:00-19:00, Sa 10:00-15:00</dd>
+                <dd>Mo-Fr 10:00-14:00 und 15:00-19:00, Sa 10:00-15:00</dd>
               </div>
             </dl>
           </aside>
@@ -370,10 +427,10 @@ function App() {
       <section className="trust-section" id="vertrauen" aria-label="Vertrauen und Bewertungen">
         <div className="trust-heading">
           <p className="section-label">Vertrauen</p>
-          <h2>Vor der Reparatur wissen, woran man ist.</h2>
+          <h2>Vor der Arbeit wissen, woran man ist.</h2>
           <p>
-            Bei Lack- und Karosseriearbeiten geht es um Vertrauen: Was ist machbar, welcher Aufwand
-            ist realistisch und was wird tatsächlich benötigt? Umfang und Kosten werden vor Beginn
+            Bei Lack-, Karosserie- und Felgenschäden zählt nicht nur das Ergebnis, sondern auch die
+            Absprache davor. Aufwand, Reparaturweg und Kosten werden vor Beginn nachvollziehbar
             besprochen.
           </p>
         </div>
@@ -410,11 +467,12 @@ function App() {
       <section className="why-section" id="warum">
         <div className="section-copy">
           <p className="section-label">Warum Vicario?</p>
-          <h2>Persönliche Werkstatt für sichtbare Fahrzeugschäden.</h2>
+          <h2>Eine Werkstatt, die Schäden, Reparatur und Service verständlich verbindet.</h2>
           <p>
-            Vicario Smart-Repair ist lokal erreichbar, arbeitet direkt mit den Kunden und hält die
-            Wege kurz. Wichtig sind eine saubere Lösung, nachvollziehbare Kosten und Arbeiten, die
-            wirklich zum Fahrzeug passen.
+            Vicario Smart-Repair ist nicht nur für kleine Lackschäden da. Kunden bekommen Hilfe bei
+            Smart-Repair, Kfz-Reparatur, Felgen, Aufbereitung, Innenraum und ausgewählten
+            Tuning-Arbeiten. Die persönliche Betreuung wird mit aktueller Werkstatttechnik und
+            sauberer Ausführung verbunden.
           </p>
         </div>
         <div className="reason-grid" aria-label="Qualitätsmerkmale">
@@ -430,11 +488,11 @@ function App() {
       <section className="services-section" id="leistungen">
         <div className="section-heading">
           <p className="section-label">Leistungen</p>
-          <h2>Hilfe bei Lackschäden, Dellen, Felgen und Fahrzeugdetails.</h2>
+          <h2>Leistungen für Smart-Repair, Reparatur und Fahrzeugdetails.</h2>
           <p>
-            Der Schwerpunkt liegt auf sichtbaren Schäden, kleineren Reparaturen und gepflegten
-            Fahrzeugdetails. Bei umfangreicheren Arbeiten wird der passende Reparaturweg vor Beginn
-            besprochen.
+            Von kleinen Schönheitsfehlern bis zu ausgewählten Reparatur- und Tuning-Arbeiten:
+            Vicario Smart-Repair bündelt viele Arbeiten rund um Lack, Felgen, Innenraum,
+            Aufbereitung und Fahrzeugtechnik.
           </p>
         </div>
         <div className="services-grid">
@@ -456,9 +514,10 @@ function App() {
       <section className="before-after-section" id="arbeiten">
         <div className="section-heading compact">
           <p className="section-label">Arbeitsbeispiele</p>
-          <h2>Vorher und nachher an Fahrzeugdetails.</h2>
+          <h2>So können reparierte Fahrzeugdetails wieder aussehen.</h2>
           <p>
-            Diese Beispiele zeigen Lack, Felge und Stoßfänger vor und nach der Bearbeitung.
+            Vorher-Nachher-Beispiele zeigen direkt, wie Lack, Felgen oder Stoßfänger nach der
+            Bearbeitung wieder gepflegter wirken können.
           </p>
         </div>
         <div className="repair-grid">
@@ -487,7 +546,7 @@ function App() {
       <section className="process-section" id="ablauf">
         <div className="section-heading compact">
           <p className="section-label">Ablauf</p>
-          <h2>Vom Foto zum Werkstatttermin in vier Schritten.</h2>
+          <h2>Vom Kontakt zur Reparatur in vier Schritten.</h2>
         </div>
         <div className="process-grid">
           {process.map((item) => (
@@ -505,12 +564,11 @@ function App() {
           <img src={workshopImage} alt="Moderne Kfz-Werkstatt mit Hebebühne, Werkzeug und Fahrzeug" />
         </div>
         <div className="appointment-content">
-          <p className="section-label">Schadenanfrage</p>
-          <h2>Schaden anfragen – mit Foto und Rückrufnummer.</h2>
+          <p className="section-label">Anfrage</p>
+          <h2>Schaden oder Reparatur anfragen.</h2>
           <p>
-            Das Formular bereitet eine E-Mail an die Werkstatt vor. Hilfreich sind Name,
-            Telefonnummer, Fahrzeugmodell, Fotos und eine kurze Beschreibung. Ein endgültiger Preis
-            ist erst möglich, wenn das Fahrzeug vor Ort angesehen wurde.
+            Schicken Sie die wichtigsten Angaben mit, damit die Werkstatt den passenden Weg besser
+            vorbereiten kann. Ein endgültiger Preis ist erst nach Sichtung am Fahrzeug möglich.
           </p>
 
           <form className="request-form" onSubmit={handleRequestSubmit}>
@@ -552,11 +610,11 @@ function App() {
                 <span>{selectedFileCount > 0 ? `${selectedFileCount} Foto(s) ausgewählt` : 'JPG oder PNG'}</span>
               </label>
               <label className="wide-field">
-                Was ist passiert?
+                Was soll gemacht werden?
                 <textarea
                   value={formData.damage}
                   onChange={updateField('damage')}
-                  placeholder="z. B. Parkschramme hinten rechts, Kratzer am Kotflügel ..."
+                  placeholder="z. B. Parkschramme hinten rechts, Felgenschaden, Brandloch im Sitz, Wartung oder Tuning-Wunsch ..."
                   rows={5}
                 />
               </label>
@@ -609,17 +667,21 @@ function App() {
       <section className="about-section" id="betrieb">
         <div className="section-copy inverse">
           <p className="section-label">Betrieb</p>
-          <h2>Persönliche Werkstatt, direkte Wege, saubere Arbeit.</h2>
+          <h2>Persönliche Werkstatt, direkte Absprache, viele Leistungen rund ums Fahrzeug.</h2>
           <p>
-            Vicario Smart-Repair verbindet Kfz-Reparatur mit gezielter Arbeit an Lack, Felgen und
-            Karosseriedetails. Der Betrieb steht für ruhige Kommunikation, nachvollziehbare
-            Absprachen und Arbeiten, die zum Fahrzeug passen.
+            Vicario Smart-Repair verbindet klassische Kfz-Reparatur mit Smart-Repair,
+            Felgenreparatur, Fahrzeugaufbereitung, Innenraumarbeiten und ausgewählten
+            Tuning-Leistungen. Kunden bekommen eine verständliche Beratung und wissen vor Beginn,
+            welcher Weg sinnvoll ist.
           </p>
         </div>
         <div className="profile-card">
           <span>Inhaber</span>
           <strong>Alessandro Vicario</strong>
-          <p>Ihr Ansprechpartner für Smart-Repair, Kfz-Reparatur, Lack, Felgen und Fahrzeugdetails.</p>
+          <p>
+            Ihr Ansprechpartner für Smart-Repair, Kfz-Reparatur, Felgen, Aufbereitung, Tuning und
+            Fahrzeugdetails.
+          </p>
         </div>
       </section>
 
@@ -641,9 +703,10 @@ function App() {
       <section className="contact-section" id="kontakt">
         <div className="contact-copy">
           <p className="section-label">Kontakt</p>
-          <h2>Kontakt aufnehmen und Termin abstimmen.</h2>
+          <h2>Anrufen, Anfrage senden oder Fahrzeugabgabe abstimmen.</h2>
           <p>
-            Für eine Anfrage reichen wenige Angaben. Wenn es dringend ist, rufen Sie direkt an.
+            Für schnelle Fragen rufen Sie direkt an. Für sichtbare Schäden oder konkrete Arbeiten
+            können Sie die wichtigsten Angaben vorab senden.
           </p>
         </div>
         <div className="contact-actions">
@@ -666,7 +729,7 @@ function App() {
         className={`mobile-action-bar${showMobileBar ? ' is-visible' : ''}`}
         aria-label="Schnellkontakt mobil"
       >
-        <a href="#anfrage">Foto senden</a>
+        <a href="#anfrage">Anfragen</a>
         <a href={phoneHref}>Anrufen</a>
       </div>
 
@@ -680,7 +743,10 @@ function App() {
                 <small>Smart-Repair</small>
               </span>
             </a>
-            <p>Smart-Repair, Kfz-Reparatur und Fahrzeugdetails in Köln-Neubrück.</p>
+            <p>
+              Smart-Repair, Kfz-Reparatur, Felgendoktor, Aufbereitung und Tuning in
+              Köln-Neubrück.
+            </p>
           </div>
           <div>
             <h3>Kontakt</h3>
@@ -694,9 +760,9 @@ function App() {
           </div>
           <div>
             <h3>Öffnungszeiten</h3>
-            <p>Mo-Fr 10:00-14:00 und 15:00-19:00</p>
-            <p>Sa 10:00-15:00</p>
-            <p>Abgabe nach Absprache</p>
+            <p>Mo-Fr 10:00–14:00 und 15:00–19:00</p>
+            <p>Sa 10:00–15:00</p>
+            <p>24-Stunden-Annahme nach Absprache</p>
           </div>
           <div>
             <h3>Leistungen</h3>
