@@ -22,19 +22,19 @@ const googleReviewsHref =
 const mailHref = `mailto:${publicEmail}?subject=${encodeURIComponent(
   'Schadenanfrage Vicario Smart-Repair',
 )}&body=${encodeURIComponent(
-  'Hallo Vicario Smart-Repair,\n\nich möchte einen Schaden einschätzen lassen.\n\nFahrzeugmodell:\nSchaden:\nRückrufnummer:\n\nFotos füge ich im Anhang hinzu.\n',
+  'Hallo Vicario Smart-Repair,\n\nich möchte eine Anfrage stellen.\n\nFahrzeugmodell:\nSchaden:\nRückrufnummer:\n\nFotos füge ich im Anhang hinzu.\n',
 )}`
 
 const trustMetrics = [
   {
     label: 'Google-Bewertung',
     value: '4,5 / 5',
-    text: 'Viele Kunden loben Rückmeldung, Absprache und Ergebnis.',
+    text: 'Viele Kunden nennen Service, Preis und Ergebnis positiv.',
   },
   {
     label: 'Kundenbewertungen',
     value: '50+',
-    text: 'Erfahrungen von Kunden aus Köln und Umgebung.',
+    text: 'Öffentlich sichtbare Erfahrungen aus Köln und Umgebung.',
   },
   {
     label: 'Standort',
@@ -42,9 +42,9 @@ const trustMetrics = [
     text: 'Direkt am Neubrücker Ring.',
   },
   {
-    label: 'Kontakt',
-    value: 'Foto oder Anruf',
-    text: 'Schaden zeigen oder direkt telefonisch klären.',
+    label: 'Erreichbarkeit',
+    value: 'Telefon & E-Mail',
+    text: 'Für Fragen, Termine und kurze Abstimmungen.',
   },
 ]
 
@@ -66,22 +66,22 @@ const reviews = [
 const reasons = [
   {
     title: 'Erst prüfen, dann entscheiden',
-    text: 'Der Schaden wird zuerst eingeordnet, bevor Termin, Aufwand oder Reparaturweg feststehen.',
+    text: 'Nicht jeder sichtbare Schaden braucht dieselbe Lösung. Vor Beginn wird besprochen, welcher Reparaturweg sinnvoll ist.',
   },
   {
-    title: 'Kosten vorher besprechen',
-    text: 'Der mögliche Aufwand wird vor der Arbeit erklärt, damit keine unnötigen Reparaturen entstehen.',
+    title: 'Kosten vor Beginn besprechen',
+    text: 'Aufwand und mögliche Kosten werden angesprochen, bevor die Arbeit am Fahrzeug startet.',
   },
   {
-    title: 'Smart-Repair für sichtbare Schäden',
-    text: 'Kratzer, Dellen, Felgen und Parkschrammen werden gezielt geprüft und passend eingeordnet.',
+    title: 'Persönlicher Ansprechpartner',
+    text: 'Kurze Wege und direkte Kommunikation mit der Werkstatt statt anonymer Annahme.',
   },
   {
-    title: 'Mobilität nach Absprache',
-    text: 'Wenn das Fahrzeug länger bleibt, wird vorher geklärt, welche Lösung möglich ist.',
+    title: 'Arbeit an sichtbaren Details',
+    text: 'Lack, Felgen und Karosseriekanten bekommen die Aufmerksamkeit, die man im Alltag direkt sieht.',
   },
   {
-    title: 'Samstags geöffnet',
+    title: 'Samstags erreichbar',
     text: 'Praktisch für Kunden, die unter der Woche wenig Zeit für die Werkstatt haben.',
   },
   {
@@ -98,12 +98,12 @@ const services = [
   },
   {
     title: 'Lackkratzer & Parkschrammen',
-    text: 'Kratzer und Parkschäden an Stoßfänger, Kotflügel oder Tür werden geprüft und verständlich erklärt.',
+    text: 'Bearbeitung typischer Spuren an Stoßfänger, Kotflügel, Tür oder Klarlack nach Parkplatzremplern und Alltagskratzern.',
     details: ['Stoßfänger', 'Klarlack', 'Lackschäden'],
   },
   {
     title: 'Dellen & Beulen',
-    text: 'Kleine Dellen und Beulen werden je nach Stelle, Lackzustand und Aufwand passend eingeordnet.',
+    text: 'Kleine Verformungen an Tür, Kotflügel oder Karosserie, abhängig von Stelle, Größe und Lackzustand.',
     details: ['Tür', 'Kotflügel', 'Karosserie'],
   },
   {
@@ -113,7 +113,7 @@ const services = [
   },
   {
     title: 'Kfz-Reparatur',
-    text: 'Diagnose, Wartung und Reparatur mit klarer Rückmeldung, bevor größere Arbeiten durchgeführt werden.',
+    text: 'Wartung, Diagnose und Reparatur für alltägliche Werkstattarbeiten am Fahrzeug.',
     details: ['Diagnose', 'Wartung', 'Reparatur'],
   },
   {
@@ -151,22 +151,22 @@ const process = [
   {
     step: '01',
     title: 'Schaden fotografieren',
-    text: 'Machen Sie ein Foto aus der Nähe und ein weiteres Foto mit etwas Abstand zum Fahrzeug.',
+    text: 'Machen Sie ein Detailbild und ein Foto mit etwas Abstand, damit die Stelle am Fahrzeug erkennbar ist.',
   },
   {
     step: '02',
-    title: 'Anfrage senden',
-    text: 'Senden Sie Fahrzeugmodell, kurze Beschreibung und Rückrufnummer für die erste Einordnung mit.',
+    title: 'Angaben mitschicken',
+    text: 'Fahrzeugmodell, kurze Beschreibung und Telefonnummer reichen für den ersten Kontakt.',
   },
   {
     step: '03',
-    title: 'Rückmeldung erhalten',
-    text: 'Sie erhalten eine Rückmeldung, ob eine Reparatur möglich wirkt, ob Rückfragen offen sind oder ob ein Termin sinnvoll ist.',
+    title: 'Werkstatt meldet sich',
+    text: 'Vicario Smart-Repair klärt offene Fragen und stimmt ab, ob ein Termin sinnvoll ist.',
   },
   {
     step: '04',
-    title: 'Vor Ort prüfen lassen',
-    text: 'Endgültig wird der Schaden am Fahrzeug beurteilt, bevor die Arbeit beginnt.',
+    title: 'Fahrzeug ansehen lassen',
+    text: 'Vor Beginn wird das Fahrzeug vor Ort angesehen und der Reparaturweg besprochen.',
   },
 ]
 
@@ -181,12 +181,12 @@ const faqs = [
   {
     question: 'Reicht ein Foto für einen festen Preis?',
     answer:
-      'Ein Foto hilft für eine erste Einschätzung. Der endgültige Aufwand wird direkt am Fahrzeug geprüft, damit die Absprache fair bleibt.',
+      'Ein Foto hilft bei der groben Richtung. Ein verbindlicher Preis ist erst am Fahrzeug möglich, weil Tiefe, Stelle und Lackzustand eine Rolle spielen.',
   },
   {
     question: 'Kann ich auch direkt anrufen?',
     answer:
-      'Ja. Für schnelle Rückfragen oder kurzfristige Termine erreichen Sie Vicario Smart-Repair telefonisch unter +49 157 76130545.',
+      'Ja. Für kurze Fragen oder Terminwünsche erreichen Sie Vicario Smart-Repair telefonisch unter +49 157 76130545.',
   },
   {
     question: 'Welche Schäden sind typisch für Smart-Repair?',
@@ -206,12 +206,12 @@ const faqs = [
   {
     question: 'Wie schnell bekomme ich eine Rückmeldung?',
     answer:
-      'Anfragen werden so schnell wie möglich geprüft. Je klarer Fotos, Fahrzeugmodell und Beschreibung sind, desto schneller kann der nächste Schritt eingeschätzt werden.',
+      'So schnell wie möglich während der Öffnungszeiten. Vollständige Angaben helfen, ohne mehrere Rückfragen voranzukommen.',
   },
   {
     question: 'Muss ich für die erste Einschätzung direkt vorbeikommen?',
     answer:
-      'Für eine erste Einordnung reichen oft Fotos. Die endgültige Beurteilung erfolgt jedoch am Fahrzeug vor Ort.',
+      'Für eine grobe Richtung reichen oft Fotos. Die endgültige Beurteilung erfolgt jedoch am Fahrzeug.',
   },
   {
     question: 'Wann lohnt sich Smart-Repair nicht?',
@@ -245,7 +245,7 @@ function App() {
     const body = [
       'Hallo Vicario Smart-Repair,',
       '',
-      'ich möchte einen Schaden einschätzen lassen.',
+      'ich möchte eine Anfrage stellen.',
       '',
       `Name: ${formData.name || '-'}`,
       `Fahrzeugmodell: ${formData.vehicle || '-'}`,
@@ -302,8 +302,8 @@ function App() {
             <p className="eyebrow">Kfz-Werkstatt in Köln-Neubrück</p>
             <h1>Kratzer, Dellen und Lackschäden sauber beheben lassen.</h1>
             <p className="hero-lead">
-              Senden Sie ein Foto vom Schaden und erhalten Sie eine erste Rückmeldung – klar,
-              direkt und ohne unnötiges Hin und Her.
+              Senden Sie ein Foto vom Schaden und erhalten Sie eine erste Rückmeldung – direkt und
+              ohne unnötiges Hin und Her.
             </p>
             <div className="hero-actions" aria-label="Kontaktoptionen">
               <a className="primary-button" href="#anfrage">
@@ -322,12 +322,12 @@ function App() {
           </div>
 
           <aside className="hero-card" aria-label="Schnellkontakt">
-            <p className="card-label">Schaden einschätzen lassen</p>
-            <h2>Schaden zeigen. Nächsten Schritt klären.</h2>
+            <p className="card-label">Schnellkontakt</p>
+            <h2>Kurz anfragen. Termin abstimmen.</h2>
             <dl>
               <div>
-                <dt>Für eine schnelle Rückmeldung</dt>
-                <dd>Foto vom Schaden, Fahrzeugmodell, kurze Beschreibung und Rückrufnummer.</dd>
+                <dt>Für den ersten Kontakt</dt>
+                <dd>Fahrzeugmodell, kurze Beschreibung, Rückrufnummer und bei Bedarf ein Foto.</dd>
               </div>
               <div>
                 <dt>Telefon</dt>
@@ -349,11 +349,11 @@ function App() {
       <section className="trust-section" id="vertrauen" aria-label="Vertrauen und Bewertungen">
         <div className="trust-heading">
           <p className="section-label">Vertrauen</p>
-          <h2>Erst verstehen, dann reparieren.</h2>
+          <h2>Vor der Reparatur wissen, woran man ist.</h2>
           <p>
-            Bei Lack- und Karosserieschäden wollen Kunden vorher wissen, was möglich ist, welcher
-            Aufwand entsteht und welcher nächste Schritt sinnvoll ist. Deshalb wird der Schaden
-            verständlich besprochen, bevor die Arbeit beginnt.
+            Bei Lack- und Karosseriearbeiten geht es um Vertrauen: Was ist machbar, welcher Aufwand
+            ist realistisch und was wird tatsächlich benötigt? Umfang und Kosten werden vor Beginn
+            besprochen.
           </p>
         </div>
 
@@ -387,10 +387,11 @@ function App() {
       <section className="why-section" id="warum">
         <div className="section-copy">
           <p className="section-label">Warum Vicario?</p>
-          <h2>Eine Werkstatt, die Schäden verständlich erklärt.</h2>
+          <h2>Persönliche Werkstatt für sichtbare Fahrzeugschäden.</h2>
           <p>
-            Bei sichtbaren Schäden zählt nicht nur das Ergebnis, sondern auch die Absprache davor.
-            Sie erfahren, was möglich ist, was sich lohnt und welcher nächste Schritt sinnvoll ist.
+            Vicario Smart-Repair ist lokal erreichbar, arbeitet direkt mit den Kunden und hält die
+            Wege kurz. Wichtig sind eine saubere Lösung, nachvollziehbare Kosten und Arbeiten, die
+            wirklich zum Fahrzeug passen.
           </p>
         </div>
         <div className="reason-grid" aria-label="Qualitätsmerkmale">
@@ -409,8 +410,8 @@ function App() {
           <h2>Hilfe bei Lackschäden, Dellen, Felgen und Fahrzeugdetails.</h2>
           <p>
             Der Schwerpunkt liegt auf sichtbaren Schäden, kleineren Reparaturen und gepflegten
-            Fahrzeugdetails. Größere Arbeiten werden erst nach Prüfung und klarer Absprache
-            eingeordnet.
+            Fahrzeugdetails. Bei umfangreicheren Arbeiten wird der passende Reparaturweg vor Beginn
+            besprochen.
           </p>
         </div>
         <div className="services-grid">
@@ -432,10 +433,9 @@ function App() {
       <section className="before-after-section" id="arbeiten">
         <div className="section-heading compact">
           <p className="section-label">Arbeitsbeispiele</p>
-          <h2>So können reparierte Fahrzeugdetails wieder aussehen.</h2>
+          <h2>Vorher und nachher an Fahrzeugdetails.</h2>
           <p>
-            Anhand echter Fahrzeugdetails sehen Sie direkt, wie Kratzer, Felgen oder Stoßfänger
-            nach der Bearbeitung wieder wirken können.
+            Diese Beispiele zeigen Lack, Felge und Stoßfänger vor und nach der Bearbeitung.
           </p>
         </div>
         <div className="repair-grid">
@@ -464,7 +464,7 @@ function App() {
       <section className="process-section" id="ablauf">
         <div className="section-heading compact">
           <p className="section-label">Ablauf</p>
-          <h2>Vom Foto zur Reparatur in vier klaren Schritten.</h2>
+          <h2>Vom Foto zum Werkstatttermin in vier Schritten.</h2>
         </div>
         <div className="process-grid">
           {process.map((item) => (
@@ -485,10 +485,9 @@ function App() {
           <p className="section-label">Schadenanfrage</p>
           <h2>Schaden anfragen – mit Foto und Rückrufnummer.</h2>
           <p>
-            Je klarer die Fotos und Angaben sind, desto schneller kann die Werkstatt den nächsten
-            Schritt einschätzen. Ob Smart-Repair, Lackarbeit oder ein Termin vor Ort sinnvoll ist,
-            wird nach den Angaben geprüft. Ein endgültiger Preis ist erst nach Sichtung am Fahrzeug
-            möglich.
+            Das Formular bereitet eine E-Mail an die Werkstatt vor. Hilfreich sind Name,
+            Telefonnummer, Fahrzeugmodell, Fotos und eine kurze Beschreibung. Ein endgültiger Preis
+            ist erst möglich, wenn das Fahrzeug vor Ort angesehen wurde.
           </p>
 
           <form className="request-form" onSubmit={handleRequestSubmit}>
@@ -587,11 +586,11 @@ function App() {
       <section className="about-section" id="betrieb">
         <div className="section-copy inverse">
           <p className="section-label">Betrieb</p>
-          <h2>Persönliche Werkstatt, direkte Absprache, saubere Arbeit.</h2>
+          <h2>Persönliche Werkstatt, direkte Wege, saubere Arbeit.</h2>
           <p>
             Vicario Smart-Repair verbindet Kfz-Reparatur mit gezielter Arbeit an Lack, Felgen und
-            Karosseriedetails. Kunden bekommen eine verständliche Rückmeldung, klare Absprache und
-            wissen vor Beginn, welcher Weg sinnvoll ist.
+            Karosseriedetails. Der Betrieb steht für ruhige Kommunikation, nachvollziehbare
+            Absprachen und Arbeiten, die zum Fahrzeug passen.
           </p>
         </div>
         <div className="profile-card">
@@ -619,10 +618,9 @@ function App() {
       <section className="contact-section" id="kontakt">
         <div className="contact-copy">
           <p className="section-label">Kontakt</p>
-          <h2>Foto senden, Rückruf erhalten oder Termin abstimmen.</h2>
+          <h2>Kontakt aufnehmen und Termin abstimmen.</h2>
           <p>
-            Für eine schnelle Einschätzung reichen wenige Angaben. Wenn es dringend ist, rufen Sie
-            direkt an.
+            Für eine Anfrage reichen wenige Angaben. Wenn es dringend ist, rufen Sie direkt an.
           </p>
         </div>
         <div className="contact-actions">
