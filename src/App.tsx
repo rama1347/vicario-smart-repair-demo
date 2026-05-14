@@ -8,7 +8,9 @@ import {
   type FormEvent,
 } from 'react'
 
-const workshopImage = '/vicario-workshop.png'
+const assetUrl = (path: string) => `${import.meta.env.BASE_URL}${path}`
+
+const workshopImage = assetUrl('vicario-workshop.png')
 const publicEmail = 'info@vicario-smart-repair.de'
 const phoneDisplay = '+49 157 76130545'
 const phoneHref = 'tel:+4915776130545'
@@ -126,22 +128,22 @@ const beforeAfter = [
     title: 'Lackkratzer am Kotflügel',
     before: 'sichtbarer Kratzer im Lack',
     after: 'Oberfläche deutlich sauberer und gepflegter',
-    beforeImage: '/vicario-before-after/scratch-before.jpg',
-    afterImage: '/vicario-before-after/scratch-after.jpg',
+    beforeImage: assetUrl('vicario-before-after/scratch-before.jpg'),
+    afterImage: assetUrl('vicario-before-after/scratch-after.jpg'),
   },
   {
     title: 'Felge aufbereitet',
     before: 'Felge vor der Aufbereitung',
     after: 'fertige Felge am Fahrzeug',
-    beforeImage: '/vicario-before-after/wheel-before.jpg',
-    afterImage: '/vicario-before-after/wheel-after.jpg',
+    beforeImage: assetUrl('vicario-before-after/wheel-before.jpg'),
+    afterImage: assetUrl('vicario-before-after/wheel-after.jpg'),
   },
   {
     title: 'Parkschramme am Heck',
     before: 'sichtbare Lackspuren am Stoßfänger',
     after: 'ruhigeres, gepflegtes Heckbild',
-    beforeImage: '/vicario-before-after/bumper-before.jpg',
-    afterImage: '/vicario-before-after/bumper-after.jpg',
+    beforeImage: assetUrl('vicario-before-after/bumper-before.jpg'),
+    afterImage: assetUrl('vicario-before-after/bumper-after.jpg'),
   },
 ]
 
