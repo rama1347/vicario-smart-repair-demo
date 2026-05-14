@@ -408,9 +408,9 @@ function App() {
           <p className="section-label">Vertrauen</p>
           <h2>Vor der Arbeit wissen, woran man ist.</h2>
           <p>
-            Bei Lack-, Karosserie- und Felgenschäden zählt nicht nur das Ergebnis, sondern auch die
-            Absprache davor. Aufwand, Reparaturweg und Kosten werden vor Beginn nachvollziehbar
-            besprochen.
+            Bei Lack-, Karosserie- und Felgenschäden möchten Kunden vorab wissen, welcher Aufwand
+            entsteht, welcher Reparaturweg sinnvoll ist und welche Kosten zu erwarten sind. Aufwand,
+            Reparaturweg und Kosten werden vor Beginn nachvollziehbar besprochen.
           </p>
         </div>
 
@@ -449,9 +449,9 @@ function App() {
           <p className="section-label">Warum Vicario?</p>
           <h2>Mehr als Smart-Repair: Werkstatt, Service und Fahrzeugdetails aus einer Hand.</h2>
           <p>
-            Vicario Smart-Repair ist nicht nur für kleine Lackschäden da. Kunden bekommen Hilfe bei
-            Smart-Repair, Kfz-Reparatur, Felgen, Aufbereitung, Innenraum und ausgewählten
-            Tuning-Arbeiten – mit direkter Betreuung vor Ort.
+            Zum Angebot gehören kleine Lackschäden, Smart-Repair, Kfz-Reparatur, Felgen,
+            Aufbereitung, Innenraum und ausgewählte Tuning-Arbeiten. Kunden bekommen Hilfe bei
+            vielen Arbeiten rund ums Fahrzeug – mit direkter Betreuung vor Ort.
           </p>
         </div>
         <div className="reason-grid" aria-label="Qualitätsmerkmale">
