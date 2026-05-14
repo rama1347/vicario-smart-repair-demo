@@ -425,7 +425,7 @@ function App() {
         </div>
 
         <div className="review-heading">
-          <h3>Aus Google-Bewertungen</h3>
+          <h3>Google-Bewertungen</h3>
           <p>Kurze Auszüge aus öffentlich sichtbaren Bewertungen.</p>
         </div>
         <div className="review-grid" aria-label="Auszüge aus Google-Bewertungen">
@@ -697,13 +697,13 @@ function App() {
               <a href="#anfrage">
                 Anfrage senden
               </a>
+              <a href={mailHref}>
+                E-Mail
+              </a>
               <a href={mapsHref} target="_blank" rel="noreferrer">
                 Route planen
               </a>
             </div>
-            <p className="contact-note">
-              E-Mail: <a href={mailHref}>{publicEmail}</a>
-            </p>
           </div>
         </div>
       </section>
@@ -737,13 +737,20 @@ function App() {
             <p>Sa 10:00–15:00</p>
             <p>24-Stunden-Annahme nach Absprache</p>
           </div>
-          <div>
+          <div className="footer-services">
             <h3>Leistungen</h3>
-            <ul>
-              {footerServices.map((service) => (
-                <li key={service}>{service}</li>
-              ))}
-            </ul>
+            <div className="footer-service-columns">
+              <ul>
+                {footerServices.slice(0, 4).map((service) => (
+                  <li key={service}>{service}</li>
+                ))}
+              </ul>
+              <ul>
+                {footerServices.slice(4).map((service) => (
+                  <li key={service}>{service}</li>
+                ))}
+              </ul>
+            </div>
           </div>
           <div>
             <h3>Standort & Rechtliches</h3>
