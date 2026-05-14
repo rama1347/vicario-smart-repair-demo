@@ -384,14 +384,14 @@ h3 {
 .process-step,
 .repair-card,
 .profile-card,
-.contact-actions > a {
+.contact-buttons > a {
   border-radius: 8px;
 }
 
 .metric-card,
 .review-card,
 .profile-card,
-.contact-actions > a {
+.contact-buttons > a {
   border: 1px solid rgba(255, 255, 255, 0.13);
   background: rgba(255, 255, 255, 0.055);
 }
@@ -1113,30 +1113,52 @@ h3 {
 }
 
 .contact-section {
-  display: grid;
-  grid-template-columns: minmax(0, 0.95fr) minmax(360px, 0.78fr);
-  gap: 42px;
-  align-items: center;
-  padding-top: 72px;
-  padding-bottom: 72px;
+  padding-top: 36px;
+  padding-bottom: 36px;
   color: #ffffff;
-  background:
-    linear-gradient(135deg, rgba(199, 45, 37, 0.16), rgba(241, 189, 54, 0.06)),
-    var(--ink);
+  background: var(--ink);
+}
+
+.contact-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(340px, 0.72fr);
+  gap: 32px;
+  align-items: center;
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 30px 34px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(199, 45, 37, 0.16), rgba(241, 189, 54, 0.055));
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.2);
 }
 
 .contact-copy p {
   max-width: 620px;
 }
 
+.contact-section h2 {
+  max-width: 620px;
+  margin-bottom: 14px;
+  font-size: clamp(32px, 4vw, 44px);
+  line-height: 1.04;
+}
+
 .contact-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.contact-buttons {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
   gap: 10px;
 }
 
-.contact-actions > a {
+.contact-buttons > a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1147,16 +1169,16 @@ h3 {
   font-weight: 900;
 }
 
-.contact-actions > a:hover {
+.contact-buttons > a:hover {
   background: rgba(255, 255, 255, 0.09);
 }
 
-.contact-actions > a.contact-primary {
+.contact-buttons > a.contact-primary {
   border-color: transparent;
   background: var(--red);
 }
 
-.contact-actions > a.contact-primary:hover {
+.contact-buttons > a.contact-primary:hover {
   background: #a91f19;
 }
 
@@ -1186,8 +1208,8 @@ h3 {
 .footer-grid {
   display: grid;
   grid-template-columns: 1.15fr repeat(3, 1fr);
-  gap: 36px;
-  padding: 42px max(40px, calc((100vw - 1220px) / 2));
+  gap: 30px;
+  padding: 34px max(40px, calc((100vw - 1220px) / 2));
 }
 
 .site-footer h3 {
@@ -1197,12 +1219,18 @@ h3 {
 }
 
 .site-footer p {
-  margin-bottom: 10px;
-  line-height: 1.55;
+  margin-bottom: 8px;
+  line-height: 1.5;
 }
 
 .site-footer li {
-  margin-bottom: 9px;
+  margin-bottom: 6px;
+  line-height: 1.45;
+}
+
+.site-footer ul {
+  columns: 2;
+  column-gap: 18px;
 }
 
 .footer-brand {
@@ -1235,7 +1263,7 @@ h3 {
   .appointment-section,
   .location-section,
   .about-section,
-  .contact-section {
+  .contact-panel {
     grid-template-columns: 1fr;
   }
 
@@ -1243,7 +1271,9 @@ h3 {
     max-width: 620px;
   }
 
-  .contact-actions {
+  .contact-actions,
+  .contact-buttons {
+    align-items: flex-start;
     justify-content: flex-start;
   }
 
@@ -1333,10 +1363,14 @@ h3 {
   .process-section,
   .location-section,
   .about-section,
-  .faq-section,
-  .contact-section {
+  .faq-section {
     padding-top: 66px;
     padding-bottom: 70px;
+  }
+
+  .contact-section {
+    padding-top: 28px;
+    padding-bottom: 28px;
   }
 
   .appointment-section {
@@ -1375,11 +1409,17 @@ h3 {
     flex-direction: column;
   }
 
-  .contact-actions {
-    align-items: stretch;
+  .contact-panel {
+    padding: 26px 24px;
   }
 
-  .contact-actions > a {
+  .contact-actions,
+  .contact-buttons {
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .contact-buttons > a {
     width: 100%;
   }
 

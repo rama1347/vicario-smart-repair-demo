@@ -248,7 +248,7 @@ const footerServices = [
   'Felgendoktor',
   'Lackkratzer',
   'Dellen & Beulen',
-  'Brandlöcher',
+  'Brandlöcher in Sitzen',
   'Fahrzeugaufbereitung',
   'Kfz-Reparatur',
   'Tuning',
@@ -680,27 +680,31 @@ function App() {
       </section>
 
       <section className="contact-section" id="kontakt">
-        <div className="contact-copy">
-          <p className="section-label">Kontakt</p>
-          <h2>Schaden, Reparatur oder Termin klären?</h2>
-          <p>
-            Rufen Sie direkt an oder senden Sie die wichtigsten Angaben vorab. Die Werkstatt
-            befindet sich am Neubrücker Ring in Köln-Neubrück.
-          </p>
-        </div>
-        <div className="contact-actions" aria-label="Kontaktaktionen">
-          <a className="contact-primary" href={phoneHref}>
-            Direkt anrufen
-          </a>
-          <a href={mailHref}>
-            Anfrage senden
-          </a>
-          <a href={mapsHref} target="_blank" rel="noreferrer">
-            Route planen
-          </a>
-          <p className="contact-note">
-            E-Mail: <a href={mailHref}>{publicEmail}</a>
-          </p>
+        <div className="contact-panel">
+          <div className="contact-copy">
+            <p className="section-label">Kontakt</p>
+            <h2>Schaden, Reparatur oder Termin klären?</h2>
+            <p>
+              Rufen Sie direkt an oder senden Sie die wichtigsten Angaben vorab. Die Werkstatt
+              befindet sich am Neubrücker Ring in Köln-Neubrück.
+            </p>
+          </div>
+          <div className="contact-actions" aria-label="Kontaktaktionen">
+            <div className="contact-buttons">
+              <a className="contact-primary" href={phoneHref}>
+                Direkt anrufen
+              </a>
+              <a href="#anfrage">
+                Anfrage senden
+              </a>
+              <a href={mapsHref} target="_blank" rel="noreferrer">
+                Route planen
+              </a>
+            </div>
+            <p className="contact-note">
+              E-Mail: <a href={mailHref}>{publicEmail}</a>
+            </p>
+          </div>
         </div>
       </section>
 
@@ -743,7 +747,8 @@ function App() {
           </div>
           <div>
             <h3>Standort & Rechtliches</h3>
-            <p>Neubrücker Ring 50, 51109 Köln</p>
+            <p>Neubrücker Ring 50</p>
+            <p>51109 Köln-Neubrück</p>
             <p>
               <a href={mapsHref} target="_blank" rel="noreferrer">
                 Route planen
