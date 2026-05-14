@@ -222,6 +222,27 @@ const faqs = [
 
 const footerServices = ['Smart-Repair', 'Felgenreparatur', 'Lackkratzer', 'Dellen & Beulen']
 
+function StarRating() {
+  return (
+    <div className="star-rating" aria-label="5 von 5 Sternen">
+      {Array.from({ length: 5 }).map((_, index) => (
+        <svg key={index} viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M12 2.8 14.7 8.3 20.8 9.2 16.4 13.5 17.4 19.5 12 16.7 6.6 19.5 7.6 13.5 3.2 9.2 9.3 8.3 12 2.8Z" />
+        </svg>
+      ))}
+    </div>
+  )
+}
+
+function ArrowIcon() {
+  return (
+    <svg className="review-link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M5 12H18" />
+      <path d="M13 7L18 12L13 17" />
+    </svg>
+  )
+}
+
 function App() {
   const [showMobileBar, setShowMobileBar] = useState(false)
   const [selectedFileCount, setSelectedFileCount] = useState(0)
@@ -375,12 +396,14 @@ function App() {
           {reviews.map((review) => (
             <article className="review-card" key={review.quote}>
               <p>„{review.quote}“</p>
+              <StarRating />
               <span>{review.label}</span>
             </article>
           ))}
         </div>
         <a className="review-link" href={googleReviewsHref} target="_blank" rel="noreferrer">
-          Weitere Bewertungen bei Google ansehen
+          <span>Weitere Bewertungen bei Google ansehen</span>
+          <ArrowIcon />
         </a>
       </section>
 
