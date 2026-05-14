@@ -457,6 +457,16 @@ h3 {
   padding: 24px;
 }
 
+.review-topic {
+  display: inline-flex;
+  margin-bottom: 14px;
+  color: var(--amber);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
 .review-card p {
   margin-bottom: 0;
   color: #ffffff;
@@ -479,7 +489,7 @@ h3 {
   filter: drop-shadow(0 4px 10px rgba(241, 189, 54, 0.2));
 }
 
-.review-card span {
+.review-meta {
   display: block;
   margin-top: 10px;
   color: rgba(255, 255, 255, 0.68);

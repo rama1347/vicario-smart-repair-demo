@@ -29,10 +29,10 @@ const trustMetrics = [
   {
     label: 'Google-Bewertung',
     value: '4,5 / 5',
-    text: 'Echte Bewertungen von Kunden aus Köln und Umgebung.',
+    text: '50+ Bewertungen von Kunden aus Köln und Umgebung.',
   },
   {
-    label: 'Werkstatt',
+    label: 'Standort',
     value: 'Köln-Neubrück',
     text: 'Direkt am Neubrücker Ring erreichbar.',
   },
@@ -43,21 +43,24 @@ const trustMetrics = [
   },
   {
     label: 'Annahme',
-    value: '24 Stunden',
-    text: 'Fahrzeugabgabe nach Absprache auch außerhalb der Öffnungszeiten möglich.',
+    value: '24h',
+    text: 'Fahrzeugabgabe nach Abstimmung auch außerhalb der Öffnungszeiten möglich.',
   },
 ]
 
 const reviews = [
   {
+    topic: 'Reparatur',
     quote: 'Bin sehr zufrieden mit der Reparatur. Ein Mann ein Wort …',
     label: 'Google-Bewertung · 5 Sterne',
   },
   {
+    topic: 'Preis-Leistung',
     quote: 'Hier wird einem schnell, kompetent und zum fairen Preis geholfen.',
     label: 'Google-Bewertung · 5 Sterne',
   },
   {
+    topic: 'Service',
     quote: 'Sehr nett und zuvorkommend. Zudem sehr zuverlässig und schnell. Einfach rundum zufrieden.',
     label: 'Google-Bewertung · 5 Sterne',
   },
@@ -69,12 +72,12 @@ const reasons = [
     text: 'Kratzer, Parkschrammen, kleine Dellen und Beulen werden gezielt bearbeitet, wenn eine saubere Reparatur möglich ist.',
   },
   {
-    title: 'Kosten vor Beginn besprechen',
-    text: 'Vor Beginn wird erklärt, welcher Reparaturweg sinnvoll ist und welche Arbeiten wirklich nötig sind.',
+    title: 'Kosten und Umfang vorher besprechen',
+    text: 'Vor der Arbeit wird erklärt, welcher Reparaturweg sinnvoll ist und welche Arbeiten wirklich nötig sind.',
   },
   {
     title: 'Kostenloser Ersatzwagen',
-    text: 'Während das Fahrzeug in der Werkstatt ist, kann ein kostenloser Ersatzwagen bereitstehen.',
+    text: 'Während das Fahrzeug in der Werkstatt ist, kann bei passender Planung ein kostenloser Ersatzwagen bereitstehen.',
   },
   {
     title: '24-Stunden-Annahme',
@@ -86,7 +89,7 @@ const reasons = [
   },
   {
     title: 'Persönlicher Ansprechpartner',
-    text: 'Alessandro Vicario ist der persönliche Ansprechpartner für direkte Absprache, kurze Wege und nachvollziehbare Beratung zur Arbeit.',
+    text: 'Alessandro Vicario ist der persönliche Ansprechpartner für direkte Absprache, kurze Wege und nachvollziehbare Beratung.',
   },
 ]
 
@@ -186,7 +189,7 @@ const faqs = [
   {
     question: 'Welche Leistungen bietet Vicario Smart-Repair an?',
     answer:
-      'Zum Angebot gehören Smart-Repair, Parkschrammen, Lackkratzer, kleine Dellen und Beulen, Blechschäden, Felgenreparatur, Brandlöcher in Sitzen, Fahrzeugaufbereitung, Kfz-Reparatur und Tuning.',
+      'Zum Angebot gehören Smart-Repair, Lack- und Parkschäden, Dellen, Felgen, Innenraum, Fahrzeugaufbereitung, Kfz-Reparatur und Tuning. Viele Arbeiten werden direkt vor Ort oder vorab telefonisch besprochen.',
   },
   {
     question: 'Welche Fotos soll ich für eine Anfrage senden?',
@@ -234,9 +237,9 @@ const faqs = [
       'Vicario Smart-Repair befindet sich am Neubrücker Ring 50 in 51109 Köln, gut erreichbar aus Neubrück, Brück, Merheim und Köln-Ost.',
   },
   {
-    question: 'Wann lohnt sich Smart-Repair nicht?',
+    question: 'Arbeitet Vicario an verschiedenen Marken?',
     answer:
-      'Wenn der Schaden zu groß, ungünstig gelegen oder technisch problematisch ist, wird das offen angesprochen. Dann wird ein anderer Reparaturweg empfohlen.',
+      'Viele Arbeiten sind markenunabhängig möglich. Bei speziellen Reparaturen oder Umbauten wird vorab geklärt, ob und wie die Umsetzung sinnvoll ist.',
   },
 ]
 
@@ -367,7 +370,7 @@ function App() {
             <div className="hero-proof" aria-label="Kurzinfos">
               <span>Google 4,5 / 5 · 50+ Bewertungen</span>
               <span>Kostenloser Ersatzwagen</span>
-              <span>24h-Annahme nach Absprache</span>
+              <span>24h-Annahme nach Abstimmung</span>
               <span>Samstags geöffnet</span>
             </div>
           </div>
@@ -428,9 +431,10 @@ function App() {
         <div className="review-grid" aria-label="Auszüge aus Google-Bewertungen">
           {reviews.map((review) => (
             <article className="review-card" key={review.quote}>
+              <span className="review-topic">{review.topic}</span>
               <p>„{review.quote}“</p>
               <StarRating />
-              <span>{review.label}</span>
+              <span className="review-meta">{review.label}</span>
             </article>
           ))}
         </div>
@@ -447,7 +451,7 @@ function App() {
           <p>
             Vicario Smart-Repair ist nicht nur für kleine Lackschäden da. Kunden bekommen Hilfe bei
             Smart-Repair, Kfz-Reparatur, Felgen, Aufbereitung, Innenraum und ausgewählten
-            Tuning-Arbeiten – mit persönlicher Absprache vor der Arbeit.
+            Tuning-Arbeiten – mit direkter Betreuung vor Ort.
           </p>
         </div>
         <div className="reason-grid" aria-label="Qualitätsmerkmale">
@@ -646,8 +650,8 @@ function App() {
           <p>
             Vicario Smart-Repair verbindet klassische Kfz-Reparatur mit Smart-Repair,
             Felgenreparatur, Fahrzeugaufbereitung, Innenraumarbeiten und ausgewählten
-            Tuning-Leistungen. Kunden haben einen direkten Ansprechpartner und wissen, welcher Weg
-            sinnvoll ist, bevor die Arbeit startet.
+            Tuning-Leistungen. Kunden haben einen direkten Ansprechpartner, kurze Wege und wissen
+            vor Beginn, welcher Weg sinnvoll ist.
           </p>
         </div>
         <div className="profile-card">
@@ -655,7 +659,7 @@ function App() {
           <strong>Alessandro Vicario</strong>
           <p>
             Ihr Ansprechpartner für Smart-Repair, Kfz-Reparatur, Felgen, Aufbereitung, Tuning und
-            Fahrzeugdetails.
+            Fahrzeugdetails – für viele Marken und Fahrzeugtypen.
           </p>
         </div>
       </section>
