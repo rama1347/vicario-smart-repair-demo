@@ -39,27 +39,27 @@ const trustMetrics = [
   {
     label: 'Service',
     value: 'Ersatzwagen',
-    text: 'Kostenloser Ersatzwagen nach Absprache.',
+    text: 'Kostenloser Ersatzwagen nach vorheriger Abstimmung.',
   },
   {
     label: 'Annahme',
     value: '24 Stunden',
-    text: 'Fahrzeugabgabe auch außerhalb der Öffnungszeiten möglich.',
+    text: 'Fahrzeugabgabe außerhalb der Öffnungszeiten nach vorheriger Abstimmung möglich.',
   },
 ]
 
 const reviews = [
   {
     quote: 'Bin sehr zufrieden mit der Reparatur. Ein Mann ein Wort …',
-    label: 'Öffentliche Google-Bewertung · 5 Sterne',
+    label: 'Google-Bewertung · 5 Sterne',
   },
   {
     quote: 'Hier wird einem schnell, kompetent und zum fairen Preis geholfen.',
-    label: 'Öffentliche Google-Bewertung · 5 Sterne',
+    label: 'Google-Bewertung · 5 Sterne',
   },
   {
-    quote: 'kompetente und sehr freundliche Mitarbeiter. Dazu ein passendes Preis-Leistungsverhältnis. TOP:-))',
-    label: 'Öffentliche Google-Bewertung · 5 Sterne',
+    quote: 'Sehr nett und zuvorkommend. Zudem sehr zuverlässig und schnell. Einfach rundum zufrieden.',
+    label: 'Google-Bewertung · 5 Sterne',
   },
 ]
 
@@ -74,19 +74,19 @@ const reasons = [
   },
   {
     title: 'Kostenloser Ersatzwagen',
-    text: 'Während das Fahrzeug in der Werkstatt ist, kann nach Absprache ein Ersatzwagen kostenlos zur Verfügung stehen.',
+    text: 'Während das Fahrzeug in der Werkstatt ist, kann ein kostenloser Ersatzwagen bereitstehen.',
   },
   {
     title: '24-Stunden-Annahme',
-    text: 'Die Fahrzeugabgabe ist nach Absprache auch außerhalb der regulären Öffnungszeiten möglich.',
+    text: 'Die Fahrzeugabgabe ist auch außerhalb der regulären Öffnungszeiten möglich, wenn sie vorher abgestimmt wurde.',
   },
   {
     title: 'Prüfung auch kurzfristig möglich',
-    text: 'Sichtbare Schäden können vor Ort angeschaut werden. Für sichere Planung empfiehlt sich vorher ein Anruf oder eine Anfrage.',
+    text: 'Sichtbare Schäden können vor Ort angeschaut werden. Für sichere Planung empfiehlt sich vorher ein Anruf.',
   },
   {
     title: 'Persönlicher Ansprechpartner',
-    text: 'Alessandro Vicario steht für direkte Absprache, kurze Wege und eine verständliche Rückmeldung zur Arbeit.',
+    text: 'Alessandro Vicario ist der persönliche Ansprechpartner für direkte Absprache, kurze Wege und nachvollziehbare Beratung vor Beginn.',
   },
 ]
 
@@ -94,7 +94,7 @@ const services = [
   {
     title: 'Smart-Repair',
     text: 'Kleine optische Schäden werden gezielt bearbeitet, ohne direkt große Ersatzteil- oder Demontagekosten auszulösen.',
-    details: ['kleine Schäden', 'schnell', 'gezielt'],
+    details: ['kleine Schäden', 'gezielt', 'kostenschonend'],
   },
   {
     title: 'Parkschrammen & Lackkratzer',
@@ -109,7 +109,7 @@ const services = [
   {
     title: 'Felgendoktor',
     text: 'Kratzer, Bordsteinschäden und optische Schäden an Felgen werden für ein gepflegtes Felgenbild aufbereitet.',
-    details: ['Alufelgen', 'Bordsteinschäden', 'Optik'],
+    details: ['Alufelgen', 'Bordsteinschäden', 'Felgenbild'],
   },
   {
     title: 'Brandlöcher in Sitzen',
@@ -118,23 +118,18 @@ const services = [
   },
   {
     title: 'Fahrzeugaufbereitung',
-    text: 'Pflege und Aufbereitung für Lack, Innenraum und Fahrzeugdetails - für ein sauberes, gepflegtes Gesamtbild.',
+    text: 'Pflege und Aufbereitung für Lack, Innenraum und Fahrzeugdetails – für ein sauberes, gepflegtes Gesamtbild.',
     details: ['Lackpflege', 'Innenraum', 'Aufbereitung'],
   },
   {
     title: 'Kfz-Reparatur',
-    text: 'Reparaturen aller Art, Diagnose und Wartung mit Blick auf Komfort und Sicherheit im Fahrzeug.',
+    text: 'Diagnose, Wartung und Reparaturen mit Blick auf Alltag, Sicherheit und Werterhalt des Fahrzeugs.',
     details: ['Diagnose', 'Wartung', 'Reparatur'],
   },
   {
     title: 'Tuning & Umbauten',
-    text: 'Ausgewählte Tuning-Arbeiten wie Alufelgen, Gewinde-Sportfahrwerke, Sportbremsanlagen, Sportabgasanlagen sowie Karosserie- oder Motorumbauten.',
+    text: 'Ausgewählte Tuning-Arbeiten an Felgen, Fahrwerk, Bremsanlage, Abgasanlage, Karosserie und Fahrzeugoptik – abgestimmt auf das Fahrzeug.',
     details: ['Alufelgen', 'Fahrwerk', 'Umbauten'],
-  },
-  {
-    title: 'Annahme & Ersatzwagen',
-    text: '24-Stunden-Annahme und kostenloser Ersatzwagen erleichtern den Werkstattbesuch im Alltag.',
-    details: ['24h-Annahme', 'Ersatzwagen', 'Service'],
   },
 ]
 
@@ -166,22 +161,22 @@ const process = [
   {
     step: '01',
     title: 'Kontakt aufnehmen',
-    text: 'Per Telefon, E-Mail oder Anfrage mit Foto kann der erste Kontakt schnell gestartet werden.',
+    text: 'Per Telefon, E-Mail oder Anfrage mit Foto startet der erste Kontakt.',
   },
   {
     step: '02',
-    title: 'Schaden oder Leistung besprechen',
+    title: 'Anliegen besprechen',
     text: 'Ob Lackschaden, Felge, Innenraum, Reparatur oder Tuning: Der passende Weg wird vorab abgestimmt.',
   },
   {
     step: '03',
     title: 'Termin oder Annahme klären',
-    text: 'Je nach Aufwand wird ein Termin, eine 24-Stunden-Annahme oder eine kurze Prüfung vor Ort abgestimmt.',
+    text: 'Je nach Aufwand wird ein Termin, die Fahrzeugabgabe oder eine kurze Prüfung vor Ort vereinbart.',
   },
   {
     step: '04',
     title: 'Arbeit durchführen lassen',
-    text: 'Die Arbeit beginnt erst, wenn Umfang, Aufwand und Vorgehen verständlich besprochen sind.',
+    text: 'Die Arbeit beginnt erst, wenn Umfang, Aufwand und Vorgehen besprochen sind.',
   },
 ]
 
@@ -204,14 +199,29 @@ const faqs = [
       'Ein Foto hilft bei der groben Richtung. Ein verbindlicher Preis ist erst am Fahrzeug möglich, weil Tiefe, Stelle und Lackzustand eine Rolle spielen.',
   },
   {
-    question: 'Kann ich auch direkt anrufen?',
+    question: 'Gibt es einen Ersatzwagen?',
     answer:
-      'Ja. Für kurze Fragen oder Terminwünsche erreichen Sie Vicario Smart-Repair telefonisch unter +49 157 76130545.',
+      'Nach Absprache kann für die Dauer der Arbeiten ein kostenloser Ersatzwagen zur Verfügung gestellt werden.',
   },
   {
-    question: 'Welche Schäden sind typisch für Smart-Repair?',
+    question: 'Kann ich mein Auto außerhalb der Öffnungszeiten abgeben?',
     answer:
-      'Typisch sind kleine Lackkratzer, Parkschrammen, Dellen, Beulen, Felgenschäden und optische Schäden im sichtbaren Fahrzeugbereich.',
+      'Ja, eine 24-Stunden-Annahme ist mit vorheriger Abstimmung möglich.',
+  },
+  {
+    question: 'Kann ich ohne Termin vorbeikommen?',
+    answer:
+      'Eine kurze Prüfung vor Ort kann möglich sein. Für eine bessere Planung empfiehlt sich vorher ein Anruf.',
+  },
+  {
+    question: 'Repariert ihr auch Brandlöcher oder Schäden im Sitz?',
+    answer:
+      'Kleine Schäden an Sitzen, wie Brandlöcher oder Einschnitte, können je nach Material und Zustand ausgebessert werden.',
+  },
+  {
+    question: 'Macht Vicario auch Tuning?',
+    answer:
+      'Ja, ausgewählte Tuning-Arbeiten wie Alufelgen, Fahrwerk, Karosserie, Sportabgasanlagen, Sportbremsanlagen oder Umbauten können individuell besprochen werden.',
   },
   {
     question: 'Ist samstags geöffnet?',
@@ -224,44 +234,9 @@ const faqs = [
       'Vicario Smart-Repair befindet sich am Neubrücker Ring 50 in 51109 Köln, gut erreichbar aus Neubrück, Brück, Merheim und Köln-Ost.',
   },
   {
-    question: 'Wie schnell meldet sich die Werkstatt?',
-    answer:
-      'So schnell wie möglich während der Öffnungszeiten. Vollständige Angaben helfen, ohne mehrere Rückfragen voranzukommen.',
-  },
-  {
-    question: 'Muss ich für die erste Besprechung direkt vorbeikommen?',
-    answer:
-      'Für eine grobe Richtung reichen oft Fotos. Die endgültige Beurteilung erfolgt jedoch am Fahrzeug.',
-  },
-  {
     question: 'Wann lohnt sich Smart-Repair nicht?',
     answer:
       'Wenn der Schaden zu groß, ungünstig gelegen oder technisch problematisch ist, wird das offen angesprochen. Dann wird ein anderer Reparaturweg empfohlen.',
-  },
-  {
-    question: 'Gibt es einen Ersatzwagen?',
-    answer:
-      'Nach Absprache kann für die Dauer der Arbeiten ein kostenloser Ersatzwagen zur Verfügung gestellt werden.',
-  },
-  {
-    question: 'Kann ich mein Auto außerhalb der Öffnungszeiten abgeben?',
-    answer:
-      'Ja, eine 24-Stunden-Annahme ist nach Absprache möglich.',
-  },
-  {
-    question: 'Kann ich ohne Termin vorbeikommen?',
-    answer:
-      'Eine kurze Prüfung vor Ort kann möglich sein. Für eine bessere Planung empfiehlt sich vorher ein Anruf oder eine Anfrage mit Foto.',
-  },
-  {
-    question: 'Repariert ihr auch Brandlöcher oder Schäden im Sitz?',
-    answer:
-      'Kleine Schäden an Sitzen, wie Brandlöcher oder Einschnitte, können je nach Material und Zustand ausgebessert werden.',
-  },
-  {
-    question: 'Macht Vicario auch Tuning?',
-    answer:
-      'Ja, ausgewählte Tuning-Arbeiten wie Alufelgen, Fahrwerk, Karosserie, Sportabgasanlagen, Sportbremsanlagen oder Umbauten können nach Absprache durchgeführt werden.',
   },
 ]
 
@@ -377,8 +352,8 @@ function App() {
             <p className="eyebrow">Kfz-Werkstatt in Köln-Neubrück</p>
             <h1>Smart-Repair, Reparatur und Tuning in Köln-Neubrück.</h1>
             <p className="hero-lead">
-              Vicario Smart-Repair hilft bei sichtbaren Schäden, Kfz-Reparaturen, Felgen,
-              Aufbereitung und ausgewählten Tuning-Arbeiten - direkt am Neubrücker Ring.
+              Vicario Smart-Repair verbindet Smart-Repair, Kfz-Reparatur, Felgendoktor,
+              Aufbereitung und Tuning – direkt am Neubrücker Ring in Köln-Neubrück.
             </p>
             <div className="hero-actions" aria-label="Kontaktoptionen">
               <a className="primary-button" href="#anfrage">
@@ -389,9 +364,9 @@ function App() {
               </a>
             </div>
             <div className="hero-proof" aria-label="Kurzinfos">
-              <span>Google 4,5 / 5</span>
+              <span>Google 4,5 / 5 · 50+ Bewertungen</span>
               <span>Kostenloser Ersatzwagen</span>
-              <span>24-Stunden-Annahme</span>
+              <span>24h-Annahme nach Absprache</span>
               <span>Samstags geöffnet</span>
             </div>
           </div>
@@ -401,10 +376,10 @@ function App() {
             <h2>Schaden zeigen. Reparaturweg klären.</h2>
             <dl>
               <div>
-                <dt>Für den ersten Kontakt</dt>
+                <dt>Kurz vorbereiten</dt>
                 <dd>
-                  Foto, Fahrzeugmodell und kurze Beschreibung reichen oft für den ersten Kontakt.
-                  Bei Bedarf wird der Schaden vor Ort genauer angesehen.
+                  Foto, Fahrzeugmodell und kurze Beschreibung reichen oft für eine erste Klärung.
+                  Bei Bedarf wird das Fahrzeug vor Ort genauer angesehen.
                 </dd>
               </div>
               <div>
@@ -467,12 +442,11 @@ function App() {
       <section className="why-section" id="warum">
         <div className="section-copy">
           <p className="section-label">Warum Vicario?</p>
-          <h2>Eine Werkstatt, die Schäden, Reparatur und Service verständlich verbindet.</h2>
+          <h2>Mehr als Smart-Repair: Werkstatt, Service und Fahrzeugdetails aus einer Hand.</h2>
           <p>
             Vicario Smart-Repair ist nicht nur für kleine Lackschäden da. Kunden bekommen Hilfe bei
             Smart-Repair, Kfz-Reparatur, Felgen, Aufbereitung, Innenraum und ausgewählten
-            Tuning-Arbeiten. Die persönliche Betreuung wird mit aktueller Werkstatttechnik und
-            sauberer Ausführung verbunden.
+            Tuning-Arbeiten – mit persönlicher Absprache vor Beginn.
           </p>
         </div>
         <div className="reason-grid" aria-label="Qualitätsmerkmale">
@@ -567,7 +541,7 @@ function App() {
           <p className="section-label">Anfrage</p>
           <h2>Schaden oder Reparatur anfragen.</h2>
           <p>
-            Schicken Sie die wichtigsten Angaben mit, damit die Werkstatt den passenden Weg besser
+            Schicken Sie die wichtigsten Angaben mit, damit die Werkstatt den passenden Weg
             vorbereiten kann. Ein endgültiger Preis ist erst nach Sichtung am Fahrzeug möglich.
           </p>
 
@@ -667,11 +641,11 @@ function App() {
       <section className="about-section" id="betrieb">
         <div className="section-copy inverse">
           <p className="section-label">Betrieb</p>
-          <h2>Persönliche Werkstatt, direkte Absprache, viele Leistungen rund ums Fahrzeug.</h2>
+          <h2>Persönliche Werkstatt statt anonymer Reparaturannahme.</h2>
           <p>
             Vicario Smart-Repair verbindet klassische Kfz-Reparatur mit Smart-Repair,
             Felgenreparatur, Fahrzeugaufbereitung, Innenraumarbeiten und ausgewählten
-            Tuning-Leistungen. Kunden bekommen eine verständliche Beratung und wissen vor Beginn,
+            Tuning-Leistungen. Kunden haben einen direkten Ansprechpartner und wissen vor Beginn,
             welcher Weg sinnvoll ist.
           </p>
         </div>
@@ -703,10 +677,11 @@ function App() {
       <section className="contact-section" id="kontakt">
         <div className="contact-copy">
           <p className="section-label">Kontakt</p>
-          <h2>Anrufen, Anfrage senden oder Fahrzeugabgabe abstimmen.</h2>
+          <h2>Anrufen, Anfrage senden oder Route planen.</h2>
           <p>
-            Für schnelle Fragen rufen Sie direkt an. Für sichtbare Schäden oder konkrete Arbeiten
-            können Sie die wichtigsten Angaben vorab senden.
+            Für schnelle Fragen rufen Sie direkt an. Für konkrete Arbeiten können Sie die
+            wichtigsten Angaben vorab senden. Die Route führt direkt zum Standort am Neubrücker
+            Ring.
           </p>
         </div>
         <div className="contact-actions">
@@ -719,7 +694,7 @@ function App() {
             <strong>{phoneDisplay}</strong>
           </a>
           <a href={mapsHref} target="_blank" rel="noreferrer">
-            <span>Adresse</span>
+            <span>Route planen</span>
             <strong>Neubrücker Ring 50, 51109 Köln</strong>
           </a>
         </div>
@@ -778,9 +753,6 @@ function App() {
           <div>
             <a href="https://www.vicario-smart-repair.de/impressum/" target="_blank" rel="noreferrer">
               Impressum
-            </a>
-            <a href="https://www.vicario-smart-repair.de/impressum/" target="_blank" rel="noreferrer">
-              Datenschutz
             </a>
           </div>
         </div>
