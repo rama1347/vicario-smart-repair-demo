@@ -417,7 +417,6 @@ function App() {
             <div className="hero-mobile-info" aria-label="Kurzhinweis zur Anfrage">
               <strong>Für die Anfrage</strong>
               <p>Foto, Fahrzeugmodell und kurze Beschreibung reichen für die erste Klärung.</p>
-              <span>Telefon: {phoneDisplay}</span>
             </div>
           </div>
 
