@@ -267,7 +267,7 @@ function StarRating() {
   )
 }
 
-function MiniRatingStars() {
+function MiniRatingStars({ clipId }: { clipId: string }) {
   const starPath = 'M12 2.8 14.7 8.3 20.8 9.2 16.4 13.5 17.4 19.5 12 16.7 6.6 19.5 7.6 13.5 3.2 9.2 9.3 8.3 12 2.8Z'
 
   return (
@@ -279,10 +279,10 @@ function MiniRatingStars() {
       ))}
       <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
         <path className="mini-star-empty" d={starPath} />
-        <clipPath id="mini-half-star">
+        <clipPath id={clipId}>
           <rect x="0" y="0" width="12" height="24" />
         </clipPath>
-        <path clipPath="url(#mini-half-star)" d={starPath} />
+        <path clipPath={`url(#${clipId})`} d={starPath} />
       </svg>
     </b>
   )
@@ -397,7 +397,10 @@ function App() {
               </a>
             </div>
             <div className="hero-proof hero-proof-desktop" aria-label="Kurzinfos">
-              <span>Google 4,5 / 5 · 50+ Bewertungen</span>
+              <span className="hero-rating-badge">
+                Google 4,5 / 5 · 50+ Bewertungen
+                <MiniRatingStars clipId="desktop-half-star" />
+              </span>
               <span>Kostenloser Ersatzwagen</span>
               <span>24h-Annahme nach Abstimmung</span>
               <span>Samstags geöffnet</span>
@@ -405,10 +408,11 @@ function App() {
             <div className="hero-proof hero-proof-mobile" aria-label="Kurzinfos mobil">
               <span className="hero-rating-badge">
                 Google 4,5 / 5
-                <MiniRatingStars />
+                <MiniRatingStars clipId="mobile-half-star" />
               </span>
               <span>50+ Bewertungen</span>
               <span>Kostenloser Ersatzwagen</span>
+              <span>Samstags geöffnet</span>
             </div>
           </div>
 
