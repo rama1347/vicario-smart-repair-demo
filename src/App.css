@@ -148,7 +148,8 @@ nav a:hover {
 
 .mobile-label,
 .mobile-copy,
-.hero-proof-mobile {
+.hero-proof-mobile,
+.hero-mobile-info {
   display: none;
 }
 
@@ -1569,7 +1570,41 @@ h3 {
   }
 
   .hero-card {
-    padding: 11px 12px;
+    display: none;
+  }
+
+  .hero-mobile-info {
+    display: block;
+    margin-top: 9px;
+    padding: 10px 11px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 7px;
+    background: rgba(16, 21, 27, 0.74);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(16px);
+  }
+
+  .hero-mobile-info strong {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--amber);
+    font-size: 10.5px;
+    font-weight: 950;
+    line-height: 1.15;
+    text-transform: uppercase;
+  }
+
+  .hero-mobile-info p {
+    margin: 0 0 6px;
+    color: rgba(255, 255, 255, 0.76);
+    font-size: 12.5px;
+    line-height: 1.32;
+  }
+
+  .hero-mobile-info span {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 12.5px;
+    font-weight: 850;
   }
 
   .hero-card .card-label {
