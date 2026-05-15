@@ -617,10 +617,10 @@ function App() {
       <section className="location-section" aria-label="Standort und Anfahrt">
         <div className="section-copy">
           <p className="section-label">Anfahrt</p>
-          <h2>Ihre Werkstatt in Köln-Neubrück, direkt am Neubrücker Ring.</h2>
+          <h2>Werkstatt in Köln-Neubrück – direkt am Neubrücker Ring.</h2>
           <p>
-            Gut erreichbar für Kunden aus Neubrück, Brück, Merheim, Ostheim, Rath/Heumar und
-            Köln-Ost. Die Route zur Werkstatt kann direkt geöffnet werden.
+            Vicario Smart-Repair liegt am Neubrücker Ring 50 und ist gut erreichbar aus Neubrück,
+            Brück, Merheim, Ostheim, Rath/Heumar und Köln-Ost.
           </p>
           <div className="area-list" aria-label="Einzugsgebiet">
             {localAreas.map((area) => (
@@ -637,7 +637,7 @@ function App() {
           <div className="map-details">
             <strong>Neubrücker Ring 50, 51109 Köln</strong>
             <a href={mapsHref} target="_blank" rel="noreferrer">
-              Route planen
+              Route in Google Maps öffnen
             </a>
           </div>
         </div>

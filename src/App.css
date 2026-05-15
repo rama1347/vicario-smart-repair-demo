@@ -947,17 +947,20 @@ h3 {
 
 .map-card {
   overflow: hidden;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(22, 32, 40, 0.12);
   border-radius: 8px;
   background: #ffffff;
-  box-shadow: 0 24px 60px rgba(22, 32, 40, 0.12);
+  box-shadow: 0 24px 60px rgba(22, 32, 40, 0.11);
 }
 
 .map-visual {
   position: relative;
-  height: 320px;
+  height: 306px;
   overflow: hidden;
   background:
+    radial-gradient(circle at 52% 42%, rgba(199, 45, 37, 0.16), transparent 0 40px, transparent 92px),
+    repeating-linear-gradient(0deg, transparent 0 42px, rgba(22, 32, 40, 0.04) 42px 43px),
+    repeating-linear-gradient(90deg, transparent 0 52px, rgba(22, 32, 40, 0.035) 52px 53px),
     linear-gradient(135deg, rgba(199, 45, 37, 0.08), transparent 36%),
     linear-gradient(160deg, #eef2f0 0%, #f8f8f3 100%);
 }
@@ -972,7 +975,7 @@ h3 {
 }
 
 .map-visual::before {
-  top: 140px;
+  top: 136px;
   left: -28px;
   width: 112%;
   height: 44px;
@@ -982,7 +985,7 @@ h3 {
 .map-visual::after {
   top: -26px;
   left: 48%;
-  width: 46px;
+  width: 44px;
   height: 390px;
   transform: rotate(18deg);
 }
@@ -1004,18 +1007,18 @@ h3 {
 
 .map-road-main {
   top: 108px;
-  left: 48px;
+  left: 54px;
 }
 
 .map-road-side {
-  right: 42px;
-  bottom: 46px;
+  right: 44px;
+  bottom: 44px;
 }
 
 .map-pin {
   position: absolute;
   z-index: 3;
-  top: 128px;
+  top: 132px;
   left: 52%;
   display: grid;
   place-items: center;
@@ -1035,7 +1038,9 @@ h3 {
   align-items: center;
   justify-content: space-between;
   gap: 18px;
-  padding: 20px;
+  padding: 18px 20px;
+  border-top: 1px solid rgba(22, 32, 40, 0.08);
+  background: #ffffff;
 }
 
 .map-card strong {
@@ -1043,8 +1048,16 @@ h3 {
 }
 
 .map-card a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0 14px;
+  border: 1px solid rgba(199, 45, 37, 0.22);
+  border-radius: 6px;
   flex: 0 0 auto;
   color: var(--red);
+  background: rgba(199, 45, 37, 0.06);
   font-weight: 900;
 }
 
@@ -1452,6 +1465,10 @@ h3 {
     flex-direction: column;
   }
 
+  .map-details a {
+    width: 100%;
+  }
+
   .contact-panel {
     padding: 24px 22px;
   }
@@ -1545,6 +1562,45 @@ h3 {
 
   .repair-figure img {
     aspect-ratio: 16 / 10;
+  }
+
+  .area-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    margin-top: 22px;
+  }
+
+  .area-list span {
+    min-height: 42px;
+    padding: 0 10px;
+    font-size: 12px;
+  }
+
+  .map-visual {
+    height: 240px;
+  }
+
+  .map-road {
+    min-height: 30px;
+    padding: 0 10px;
+    font-size: 12px;
+  }
+
+  .map-road-main {
+    top: 88px;
+    left: 18px;
+  }
+
+  .map-road-side {
+    right: 18px;
+    bottom: 34px;
+  }
+
+  .map-pin {
+    top: 112px;
+    width: 48px;
+    height: 48px;
+    font-size: 13px;
   }
 
   .mobile-action-bar.is-visible {
