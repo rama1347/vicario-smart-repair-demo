@@ -267,6 +267,27 @@ function StarRating() {
   )
 }
 
+function MiniRatingStars() {
+  const starPath = 'M12 2.8 14.7 8.3 20.8 9.2 16.4 13.5 17.4 19.5 12 16.7 6.6 19.5 7.6 13.5 3.2 9.2 9.3 8.3 12 2.8Z'
+
+  return (
+    <b className="mini-rating" aria-label="4,5 von 5 Sternen">
+      {Array.from({ length: 4 }).map((_, index) => (
+        <svg key={index} viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d={starPath} />
+        </svg>
+      ))}
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path className="mini-star-empty" d={starPath} />
+        <clipPath id="mini-half-star">
+          <rect x="0" y="0" width="12" height="24" />
+        </clipPath>
+        <path clipPath="url(#mini-half-star)" d={starPath} />
+      </svg>
+    </b>
+  )
+}
+
 function ArrowIcon() {
   return (
     <svg className="review-link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -382,9 +403,12 @@ function App() {
               <span>Samstags geöffnet</span>
             </div>
             <div className="hero-proof hero-proof-mobile" aria-label="Kurzinfos mobil">
-              <span>Google 4,5 / 5</span>
+              <span className="hero-rating-badge">
+                Google 4,5 / 5
+                <MiniRatingStars />
+              </span>
               <span>50+ Bewertungen</span>
-              <span>Ersatzwagen</span>
+              <span>Kostenloser Ersatzwagen</span>
             </div>
           </div>
 

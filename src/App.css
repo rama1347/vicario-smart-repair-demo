@@ -297,6 +297,25 @@ h3 {
   background: rgba(255, 255, 255, 0.1);
 }
 
+.mini-rating {
+  display: inline-flex;
+  gap: 1px;
+  align-items: center;
+  color: var(--amber);
+  line-height: 1;
+}
+
+.mini-rating svg {
+  width: 12px;
+  height: 12px;
+  fill: currentColor;
+  filter: drop-shadow(0 2px 6px rgba(241, 189, 54, 0.22));
+}
+
+.mini-rating .mini-star-empty {
+  fill: rgba(255, 255, 255, 0.28);
+}
+
 .hero-card {
   padding: 28px;
   border: 1px solid rgba(255, 255, 255, 0.16);
@@ -1538,6 +1557,15 @@ h3 {
     padding: 0 7px;
     border-radius: 5px;
     font-size: 10.5px;
+  }
+
+  .hero-rating-badge {
+    gap: 4px;
+  }
+
+  .mini-rating svg {
+    width: 11.5px;
+    height: 11.5px;
   }
 
   .hero-card {
