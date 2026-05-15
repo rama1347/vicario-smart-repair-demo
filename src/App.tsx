@@ -346,7 +346,8 @@ function App() {
           <a href="#faq">FAQ</a>
         </nav>
         <a className="header-action" href="#anfrage" aria-label="Reparaturanfrage öffnen">
-          Reparatur anfragen
+          <span className="desktop-label">Reparatur anfragen</span>
+          <span className="mobile-label">Anfrage senden</span>
         </a>
       </header>
 
@@ -357,8 +358,14 @@ function App() {
             <p className="eyebrow">Kfz-Werkstatt in Köln-Neubrück</p>
             <h1>Smart-Repair, Reparatur und Tuning in Köln-Neubrück.</h1>
             <p className="hero-lead">
-              Vicario Smart-Repair verbindet Smart-Repair, Kfz-Reparatur, Felgendoktor,
-              Aufbereitung und Tuning – direkt am Neubrücker Ring in Köln-Neubrück.
+              <span className="desktop-copy">
+                Vicario Smart-Repair verbindet Smart-Repair, Kfz-Reparatur, Felgendoktor,
+                Aufbereitung und Tuning – direkt am Neubrücker Ring in Köln-Neubrück.
+              </span>
+              <span className="mobile-copy">
+                Smart-Repair, Kfz-Reparatur, Felgendoktor, Aufbereitung und Tuning – direkt am
+                Neubrücker Ring.
+              </span>
             </p>
             <div className="hero-actions" aria-label="Kontaktoptionen">
               <a className="primary-button" href="#anfrage">
@@ -368,10 +375,17 @@ function App() {
                 Direkt anrufen
               </a>
             </div>
-            <div className="hero-proof" aria-label="Kurzinfos">
+            <div className="hero-proof hero-proof-desktop" aria-label="Kurzinfos">
               <span>Google 4,5 / 5 · 50+ Bewertungen</span>
               <span>Kostenloser Ersatzwagen</span>
               <span>24h-Annahme nach Abstimmung</span>
+              <span>Samstags geöffnet</span>
+            </div>
+            <div className="hero-proof hero-proof-mobile" aria-label="Kurzinfos mobil">
+              <span>Google 4,5 / 5</span>
+              <span>50+ Bewertungen</span>
+              <span>Ersatzwagen</span>
+              <span>24h-Annahme</span>
               <span>Samstags geöffnet</span>
             </div>
           </div>
@@ -383,8 +397,13 @@ function App() {
               <div>
                 <dt>Kurz vorbereiten</dt>
                 <dd>
-                  Foto, Fahrzeugmodell und kurze Beschreibung reichen oft für eine erste Klärung.
-                  Bei Bedarf wird das Fahrzeug vor Ort genauer angesehen.
+                  <span className="desktop-copy">
+                    Foto, Fahrzeugmodell und kurze Beschreibung reichen oft für eine erste Klärung.
+                    Bei Bedarf wird das Fahrzeug vor Ort genauer angesehen.
+                  </span>
+                  <span className="mobile-copy">
+                    Foto, Fahrzeugmodell und kurze Beschreibung reichen oft für eine erste Klärung.
+                  </span>
                 </dd>
               </div>
               <div>
@@ -397,7 +416,10 @@ function App() {
               </div>
               <div>
                 <dt>Öffnungszeiten</dt>
-                <dd>Mo-Fr 10:00-14:00 und 15:00-19:00, Sa 10:00-15:00</dd>
+                <dd>
+                  <span className="desktop-copy">Mo-Fr 10:00-14:00 und 15:00-19:00, Sa 10:00-15:00</span>
+                  <span className="mobile-copy">Mo-Fr 10-14 &amp; 15-19 · Sa 10-15</span>
+                </dd>
               </div>
             </dl>
           </aside>
@@ -638,7 +660,6 @@ function App() {
             style={{ backgroundImage: `url(${locationImage})` }}
           />
           <div className="map-details">
-            <strong>Neubrücker Ring 50, 51109 Köln</strong>
             <a href={mapsHref} target="_blank" rel="noreferrer">
               Route in Google Maps öffnen
             </a>

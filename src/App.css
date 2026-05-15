@@ -146,6 +146,12 @@ nav a:hover {
   background: #aa271f;
 }
 
+.mobile-label,
+.mobile-copy,
+.hero-proof-mobile {
+  display: none;
+}
+
 .hero-section {
   position: relative;
   min-height: 94svh;
@@ -962,10 +968,11 @@ h3 {
 
 .map-visual {
   position: relative;
-  height: 306px;
+  aspect-ratio: 16 / 9;
+  height: auto;
   overflow: hidden;
   background-color: #eef2f0;
-  background-position: center center;
+  background-position: center top;
   background-size: cover;
 }
 
@@ -977,7 +984,7 @@ h3 {
 .map-details {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 18px;
   padding: 18px 20px;
   border-top: 1px solid rgba(22, 32, 40, 0.08);
@@ -1313,15 +1320,24 @@ h3 {
     min-width: 132px;
   }
 
+  .header-action .desktop-label {
+    display: none;
+  }
+
+  .header-action .mobile-label {
+    display: inline;
+  }
+
   .hero-section {
     min-height: auto;
-    background-position: 68% center;
+    background-position: 60% center;
   }
 
   .hero-inner {
     width: calc(100% - 40px);
     min-height: auto;
-    padding: 122px 0 46px;
+    gap: 22px;
+    padding: 108px 0 38px;
   }
 
   h1 {
@@ -1334,6 +1350,21 @@ h3 {
 
   .hero-lead {
     font-size: 18px;
+  }
+
+  .hero-lead .desktop-copy,
+  .hero-card .desktop-copy,
+  .hero-proof-desktop {
+    display: none;
+  }
+
+  .hero-lead .mobile-copy,
+  .hero-card .mobile-copy {
+    display: inline;
+  }
+
+  .hero-proof-mobile {
+    display: flex;
   }
 
   .hero-card h2 {
@@ -1451,11 +1482,79 @@ h3 {
   }
 
   h1 {
-    font-size: 36px;
+    margin-bottom: 16px;
+    font-size: 32px;
+    line-height: 0.98;
   }
 
   h2 {
     font-size: 30px;
+  }
+
+  .hero-section .eyebrow {
+    margin-bottom: 12px;
+    font-size: 11px;
+  }
+
+  .hero-inner {
+    width: calc(100% - 32px);
+    gap: 18px;
+    padding: 94px 0 30px;
+  }
+
+  .hero-lead {
+    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 1.42;
+  }
+
+  .hero-actions {
+    gap: 8px;
+  }
+
+  .hero-actions .primary-button,
+  .hero-actions .secondary-button {
+    min-height: 42px;
+  }
+
+  .hero-proof {
+    gap: 6px;
+    margin-top: 14px;
+  }
+
+  .hero-proof span {
+    min-height: 28px;
+    padding: 0 8px;
+    border-radius: 5px;
+    font-size: 11px;
+  }
+
+  .hero-card {
+    padding: 16px;
+  }
+
+  .hero-card .card-label {
+    margin-bottom: 8px;
+    font-size: 11px;
+  }
+
+  .hero-card h2 {
+    margin-bottom: 12px;
+    font-size: 21px;
+  }
+
+  .hero-card div {
+    padding: 9px 0;
+  }
+
+  .hero-card dt {
+    margin-bottom: 3px;
+    font-size: 12px;
+  }
+
+  .hero-card dd {
+    font-size: 13px;
+    line-height: 1.35;
   }
 
   .hero-actions,
@@ -1484,7 +1583,6 @@ h3 {
   .reason-card,
   .service-card,
   .process-step,
-  .hero-card,
   .repair-card,
   .profile-card {
     padding: 22px;
@@ -1519,6 +1617,7 @@ h3 {
 
   .map-visual {
     height: 240px;
+    background-position: left bottom;
   }
 
   .mobile-action-bar.is-visible {
