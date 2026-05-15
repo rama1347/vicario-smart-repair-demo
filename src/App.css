@@ -1210,6 +1210,7 @@ h3 {
 }
 
 .contact-note {
+  display: none;
   width: 100%;
   margin: 2px 0 0;
   color: rgba(255, 255, 255, 0.68);
@@ -1221,6 +1222,10 @@ h3 {
 .contact-note a {
   color: #ffffff;
   font-weight: 800;
+}
+
+.appointment-submit-mobile {
+  display: none;
 }
 
 .mobile-action-bar {
@@ -1501,6 +1506,7 @@ h3 {
   }
 
   .contact-note {
+    display: none;
     text-align: left;
   }
 }
@@ -1670,6 +1676,14 @@ h3 {
     flex-direction: column;
   }
 
+  .appointment-submit-desktop {
+    display: none;
+  }
+
+  .appointment-submit-mobile {
+    display: inline;
+  }
+
   .primary-button,
   .secondary-button {
     width: 100%;
@@ -1727,9 +1741,9 @@ h3 {
   }
 
   .service-card li {
-    min-height: 24px;
+    min-height: 22px;
     margin: 0 4px 6px 0;
-    padding: 0 7px;
+    padding: 0 6px;
     font-size: 11px;
   }
 
@@ -1750,20 +1764,30 @@ h3 {
   }
 
   .map-visual {
-    height: 240px;
+    height: 250px;
     background-position: left bottom;
+  }
+
+  .contact-buttons > a.contact-email-button {
+    display: none;
+  }
+
+  .contact-note {
+    display: block;
+    margin-top: 4px;
+    text-align: center;
   }
 
   .mobile-action-bar.is-visible {
     position: fixed;
     z-index: 40;
-    left: 12px;
-    right: 12px;
-    bottom: 12px;
+    left: 14px;
+    right: 14px;
+    bottom: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 8px;
-    padding: 8px;
+    gap: 6px;
+    padding: 6px;
     border: 1px solid rgba(255, 255, 255, 0.14);
     border-radius: 8px;
     background: rgba(13, 17, 22, 0.9);
@@ -1775,11 +1799,12 @@ h3 {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 44px;
+    min-height: 38px;
     border-radius: 6px;
     color: #ffffff;
     background: var(--red);
     font-weight: 900;
+    font-size: 13px;
   }
 
   .mobile-action-bar a:last-child {

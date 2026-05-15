@@ -308,12 +308,28 @@ function App() {
   })
 
   useEffect(() => {
-    const handleScroll = () => setShowMobileBar(window.scrollY > 760)
+    const handleScroll = () => {
+      const isMobile = window.matchMedia('(max-width: 600px)').matches
+      const blockedSelectors = ['#anfrage', '#kontakt', '.site-footer']
+      const overlapsActionArea = blockedSelectors.some((selector) => {
+        const element = document.querySelector(selector)
+        if (!element) return false
+
+        const rect = element.getBoundingClientRect()
+        return rect.top < window.innerHeight - 72 && rect.bottom > 72
+      })
+
+      setShowMobileBar(isMobile && window.scrollY > 760 && !overlapsActionArea)
+    }
 
     handleScroll()
     window.addEventListener('scroll', handleScroll, { passive: true })
+    window.addEventListener('resize', handleScroll)
 
-    return () => window.removeEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('resize', handleScroll)
+    }
   }, [])
 
   const requestMailHref = useMemo(() => {
@@ -665,7 +681,8 @@ function App() {
             </p>
             <div className="appointment-actions">
               <button className="primary-button" type="submit">
-                E-Mail mit Anfrage vorbereiten
+                <span className="appointment-submit-desktop">E-Mail mit Anfrage vorbereiten</span>
+                <span className="appointment-submit-mobile">Anfrage per E-Mail vorbereiten</span>
               </button>
               <a className="text-link" href={phoneHref}>
                 Lieber direkt anrufen
@@ -683,7 +700,7 @@ function App() {
             Die Werkstatt liegt am Neubrücker Ring 50 in Köln-Neubrück. Öffnen Sie die Route direkt
             in Google Maps und fahren Sie ohne lange Suche zum Standort.
           </p>
-          <p className="area-label">Häufige Anfahrt aus:</p>
+          <p className="area-label">Viele Kunden kommen aus:</p>
           <div className="area-list" aria-label="Einzugsgebiet">
             {localAreas.map((area) => (
               <span key={area}>{area}</span>
@@ -712,8 +729,8 @@ function App() {
           <p>
             Vicario Smart-Repair verbindet klassische Kfz-Reparatur mit Smart-Repair,
             Felgenreparatur, Fahrzeugaufbereitung, Innenraumarbeiten und ausgewählten
-            Tuning-Leistungen. Kunden haben einen direkten Ansprechpartner, kurze Wege und wissen
-            vor Beginn, welcher Weg sinnvoll ist.
+            Tuning-Leistungen. Kunden sprechen direkt mit einem Ansprechpartner und können den
+            passenden Weg vor der Arbeit besprechen.
           </p>
         </div>
         <div className="profile-card">
@@ -766,6 +783,9 @@ function App() {
                 E-Mail senden
               </a>
             </div>
+            <p className="contact-note">
+              E-Mail: <a href={mailHref}>{publicEmail}</a>
+            </p>
           </div>
         </div>
       </section>
