@@ -466,6 +466,22 @@ h3 {
   line-height: 1;
 }
 
+.metric-value {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.metric-value strong {
+  margin-bottom: 0;
+}
+
+.metric-value .mini-rating svg {
+  width: 17px;
+  height: 17px;
+}
+
 .metric-card p,
 .review-card p,
 .contact-copy p {

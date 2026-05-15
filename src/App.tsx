@@ -473,7 +473,14 @@ function App() {
           {trustMetrics.map((item) => (
             <article className="metric-card" key={item.label}>
               <span>{item.label}</span>
-              <strong>{item.value}</strong>
+              {item.label === 'Google-Bewertung' ? (
+                <div className="metric-value">
+                  <strong>{item.value}</strong>
+                  <MiniRatingStars clipId="trust-half-star" />
+                </div>
+              ) : (
+                <strong>{item.value}</strong>
+              )}
               <p>{item.text}</p>
             </article>
           ))}
