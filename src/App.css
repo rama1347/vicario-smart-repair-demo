@@ -1330,14 +1330,14 @@ h3 {
 
   .hero-section {
     min-height: auto;
-    background-position: 54% center;
+    background-position: 60% center;
   }
 
   .hero-inner {
     width: calc(100% - 40px);
     min-height: auto;
-    gap: 18px;
-    padding: 100px 0 32px;
+    gap: 22px;
+    padding: 108px 0 38px;
   }
 
   h1 {
@@ -1349,8 +1349,7 @@ h3 {
   }
 
   .hero-lead {
-    font-size: 17px;
-    line-height: 1.44;
+    font-size: 18px;
   }
 
   .hero-lead .desktop-copy,
@@ -1369,7 +1368,7 @@ h3 {
   }
 
   .hero-card h2 {
-    font-size: 24px;
+    font-size: 26px;
   }
 
   .trust-section,
