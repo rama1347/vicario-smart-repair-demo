@@ -1139,8 +1139,8 @@ h3 {
 }
 
 .contact-section {
-  padding-top: 36px;
-  padding-bottom: 36px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   color: #ffffff;
   background: var(--ink);
 }
@@ -1152,7 +1152,7 @@ h3 {
   align-items: center;
   max-width: 1220px;
   margin: 0 auto;
-  padding: 30px 34px;
+  padding: 26px 32px;
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 8px;
   background: linear-gradient(135deg, rgba(199, 45, 37, 0.16), rgba(241, 189, 54, 0.055));
@@ -1181,7 +1181,7 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  gap: 10px;
+  gap: 8px;
 }
 
 .contact-buttons > a {
@@ -1189,7 +1189,7 @@ h3 {
   align-items: center;
   justify-content: center;
   min-height: 48px;
-  padding: 0 18px;
+  padding: 0 16px;
   color: #ffffff;
   font-size: 14px;
   font-weight: 900;
@@ -1206,6 +1206,20 @@ h3 {
 
 .contact-buttons > a.contact-primary:hover {
   background: #a91f19;
+}
+
+.contact-note {
+  width: 100%;
+  margin: 2px 0 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: right;
+}
+
+.contact-note a {
+  color: #ffffff;
+  font-weight: 800;
 }
 
 .mobile-action-bar {
@@ -1241,14 +1255,21 @@ h3 {
 }
 
 .footer-services h3 {
+  width: 100%;
   text-align: center;
+}
+
+.footer-services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer-service-columns {
   display: grid;
   grid-template-columns: max-content max-content;
   justify-content: center;
-  gap: 14px;
+  gap: 9px;
 }
 
 .footer-service-columns ul {
@@ -1432,7 +1453,7 @@ h3 {
   }
 
   .contact-panel {
-    padding: 26px 24px;
+    padding: 24px 22px;
   }
 
   .contact-actions,
@@ -1443,6 +1464,10 @@ h3 {
 
   .contact-buttons > a {
     width: 100%;
+  }
+
+  .contact-note {
+    text-align: left;
   }
 }
 

@@ -697,13 +697,13 @@ function App() {
               <a href="#anfrage">
                 Anfrage senden
               </a>
-              <a href={mailHref}>
-                E-Mail
-              </a>
               <a href={mapsHref} target="_blank" rel="noreferrer">
                 Route planen
               </a>
             </div>
+            <p className="contact-note">
+              E-Mail: <a href={mailHref}>{publicEmail}</a>
+            </p>
           </div>
         </div>
       </section>
