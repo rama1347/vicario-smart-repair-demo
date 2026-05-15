@@ -385,7 +385,7 @@ function App() {
               <span>Google 4,5 / 5</span>
               <span>50+ Bewertungen</span>
               <span>Ersatzwagen</span>
-              <span>24h-Annahme</span>
+              <span className="mobile-optional">24h-Annahme</span>
               <span>Samstags geöffnet</span>
             </div>
           </div>
@@ -394,7 +394,7 @@ function App() {
             <p className="card-label">Schnellkontakt</p>
             <h2>Schaden zeigen. Reparaturweg klären.</h2>
             <dl>
-              <div>
+              <div className="hero-card-prep">
                 <dt>Kurz vorbereiten</dt>
                 <dd>
                   <span className="desktop-copy">
@@ -402,19 +402,19 @@ function App() {
                     Bei Bedarf wird das Fahrzeug vor Ort genauer angesehen.
                   </span>
                   <span className="mobile-copy">
-                    Foto, Fahrzeugmodell und kurze Beschreibung reichen oft für eine erste Klärung.
+                    Foto, Fahrzeugmodell und kurze Beschreibung reichen für die erste Klärung.
                   </span>
                 </dd>
               </div>
-              <div>
+              <div className="hero-card-phone">
                 <dt>Telefon</dt>
                 <dd>{phoneDisplay}</dd>
               </div>
-              <div>
+              <div className="hero-card-address">
                 <dt>Adresse</dt>
                 <dd>Neubrücker Ring 50, 51109 Köln</dd>
               </div>
-              <div>
+              <div className="hero-card-hours">
                 <dt>Öffnungszeiten</dt>
                 <dd>
                   <span className="desktop-copy">Mo-Fr 10:00-14:00 und 15:00-19:00, Sa 10:00-15:00</span>
