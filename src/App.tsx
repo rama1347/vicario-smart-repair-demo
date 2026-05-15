@@ -646,7 +646,7 @@ function App() {
       <section className="about-section" id="betrieb">
         <div className="section-copy inverse">
           <p className="section-label">Betrieb</p>
-          <h2>Persönliche Werkstatt statt anonymer Reparaturannahme.</h2>
+          <h2>Klare und persönliche Betreuung direkt in der Werkstatt.</h2>
           <p>
             Vicario Smart-Repair verbindet klassische Kfz-Reparatur mit Smart-Repair,
             Felgenreparatur, Fahrzeugaufbereitung, Innenraumarbeiten und ausgewählten
