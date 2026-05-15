@@ -11,6 +11,7 @@ import {
 const assetUrl = (path: string) => `${import.meta.env.BASE_URL}${path}`
 
 const workshopImage = assetUrl('vicario-workshop.png')
+const locationImage = assetUrl('vicario-location.png')
 const publicEmail = 'vicario.smartrepair@web.de'
 const phoneDisplay = '+49 157 76130545'
 const phoneHref = 'tel:+4915776130545'
@@ -629,11 +630,12 @@ function App() {
           </div>
         </div>
         <div className="map-card">
-          <div className="map-visual" aria-label="Standort am Neubrücker Ring">
-            <span className="map-road map-road-main">Neubrücker Ring</span>
-            <span className="map-road map-road-side">Köln-Neubrück</span>
-            <span className="map-pin">VS</span>
-          </div>
+          <div
+            className="map-visual"
+            role="img"
+            aria-label="Außenansicht von Vicario Smart-Repair am Neubrücker Ring"
+            style={{ backgroundImage: `url(${locationImage})` }}
+          />
           <div className="map-details">
             <strong>Neubrücker Ring 50, 51109 Köln</strong>
             <a href={mapsHref} target="_blank" rel="noreferrer">
