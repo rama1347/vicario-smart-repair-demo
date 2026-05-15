@@ -1139,8 +1139,8 @@ h3 {
 }
 
 .contact-buttons {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
   justify-content: flex-end;
   gap: 8px;
 }
@@ -1167,6 +1167,10 @@ h3 {
 
 .contact-buttons > a.contact-primary:hover {
   background: #a91f19;
+}
+
+.contact-email-button {
+  grid-column: 3;
 }
 
 .contact-note {
@@ -1447,8 +1451,13 @@ h3 {
 
   .contact-actions,
   .contact-buttons {
+    grid-template-columns: 1fr;
     align-items: stretch;
     width: 100%;
+  }
+
+  .contact-email-button {
+    grid-column: auto;
   }
 
   .contact-buttons > a {
@@ -1532,7 +1541,7 @@ h3 {
   }
 
   .hero-card {
-    padding: 13px;
+    padding: 11px 12px;
   }
 
   .hero-card .card-label {
@@ -1541,13 +1550,13 @@ h3 {
   }
 
   .hero-card h2 {
-    margin-bottom: 8px;
-    font-size: 18px;
+    margin-bottom: 6px;
+    font-size: 16px;
     line-height: 1.05;
   }
 
   .hero-card div {
-    padding: 7px 0;
+    padding: 6px 0;
   }
 
   .hero-card dt {
@@ -1561,9 +1570,16 @@ h3 {
   }
 
   .hero-card-address,
-  .hero-card-hours,
-  .hero-proof-mobile .mobile-optional {
+  .hero-card-hours {
     display: none;
+  }
+
+  .hero-card-prep dt {
+    display: none;
+  }
+
+  .hero-card-prep {
+    border-top: 0;
   }
 
   .hero-card-phone dt,
@@ -1586,6 +1602,22 @@ h3 {
     width: 100%;
   }
 
+  .trust-section,
+  .why-section,
+  .services-section,
+  .before-after-section,
+  .process-section,
+  .location-section,
+  .about-section,
+  .faq-section {
+    padding-top: 54px;
+    padding-bottom: 58px;
+  }
+
+  .section-heading {
+    margin-bottom: 30px;
+  }
+
   .trust-metrics,
   .process-grid {
     grid-template-columns: 1fr;
@@ -1603,7 +1635,7 @@ h3 {
   .process-step,
   .repair-card,
   .profile-card {
-    padding: 22px;
+    padding: 18px;
   }
 
   .service-card,
@@ -1614,7 +1646,18 @@ h3 {
 
   .service-card span,
   .process-step span {
-    margin-bottom: 24px;
+    margin-bottom: 16px;
+  }
+
+  .service-card ul {
+    margin-top: 14px;
+  }
+
+  .service-card li {
+    min-height: 24px;
+    margin: 0 4px 6px 0;
+    padding: 0 7px;
+    font-size: 11px;
   }
 
   .repair-figure img {

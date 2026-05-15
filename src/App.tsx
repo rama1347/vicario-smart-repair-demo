@@ -385,8 +385,6 @@ function App() {
               <span>Google 4,5 / 5</span>
               <span>50+ Bewertungen</span>
               <span>Ersatzwagen</span>
-              <span className="mobile-optional">24h-Annahme</span>
-              <span>Samstags geöffnet</span>
             </div>
           </div>
 
@@ -402,7 +400,8 @@ function App() {
                     Bei Bedarf wird das Fahrzeug vor Ort genauer angesehen.
                   </span>
                   <span className="mobile-copy">
-                    Foto, Fahrzeugmodell und kurze Beschreibung reichen für die erste Klärung.
+                    Für die Anfrage: Foto, Fahrzeugmodell und kurze Beschreibung reichen für die
+                    erste Klärung.
                   </span>
                 </dd>
               </div>
@@ -470,7 +469,7 @@ function App() {
       <section className="why-section" id="warum">
         <div className="section-copy">
           <p className="section-label">Warum Vicario?</p>
-          <h2>Mehr als Smart-Repair: Werkstatt, Service und Fahrzeugdetails aus einer Hand.</h2>
+          <h2>Smart-Repair, Reparatur und Fahrzeugdetails aus einer Hand.</h2>
           <p>
             Zum Angebot gehören kleine Lackschäden, Smart-Repair, Kfz-Reparatur, Felgen,
             Aufbereitung, Innenraum und ausgewählte Tuning-Arbeiten. Kunden bekommen Hilfe bei
@@ -724,10 +723,10 @@ function App() {
               <a href={mapsHref} target="_blank" rel="noreferrer">
                 Route planen
               </a>
+              <a className="contact-email-button" href={mailHref}>
+                E-Mail senden
+              </a>
             </div>
-            <p className="contact-note">
-              E-Mail: <a href={mailHref}>{publicEmail}</a>
-            </p>
           </div>
         </div>
       </section>
