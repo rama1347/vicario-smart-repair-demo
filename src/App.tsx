@@ -165,7 +165,7 @@ const process = [
   {
     step: '01',
     title: 'Kontakt aufnehmen',
-    text: 'Per Telefon, E-Mail oder Anfrage mit Foto startet der erste Kontakt.',
+    text: 'Per Telefon, E-Mail oder Anfrage startet der erste Kontakt.',
   },
   {
     step: '02',
@@ -345,8 +345,8 @@ function App() {
           <a href="#anfrage">Anfrage</a>
           <a href="#faq">FAQ</a>
         </nav>
-        <a className="header-action" href="#anfrage" aria-label="Schadenanfrage öffnen">
-          Schaden anfragen
+        <a className="header-action" href="#anfrage" aria-label="Reparaturanfrage öffnen">
+          Reparatur anfragen
         </a>
       </header>
 
@@ -362,7 +362,7 @@ function App() {
             </p>
             <div className="hero-actions" aria-label="Kontaktoptionen">
               <a className="primary-button" href="#anfrage">
-                Schaden anfragen
+                Reparatur anfragen
               </a>
               <a className="secondary-button" href={phoneHref}>
                 Direkt anrufen
