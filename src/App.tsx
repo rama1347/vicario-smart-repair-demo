@@ -476,11 +476,10 @@ function App() {
       <section className="trust-section" id="vertrauen" aria-label="Vertrauen und Bewertungen">
         <div className="trust-heading">
           <p className="section-label">Vertrauen</p>
-          <h2>Vor der Arbeit wissen, woran man ist.</h2>
+          <h2>Erst besprechen, dann reparieren.</h2>
           <p>
-            Bei Lack-, Karosserie- und Felgenschäden möchten Kunden vorab wissen, welcher Aufwand
-            entsteht, welcher Reparaturweg sinnvoll ist und welche Kosten zu erwarten sind. Aufwand,
-            Reparaturweg und Kosten werden vor Beginn nachvollziehbar besprochen.
+            Ob Lackschaden, Felge oder Karosserie: Vor der Arbeit wird erklärt, was möglich ist
+            und welcher Weg sinnvoll erscheint. So wissen Kunden früh, womit sie rechnen können.
           </p>
         </div>
 
